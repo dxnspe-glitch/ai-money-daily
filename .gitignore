@@ -1,0 +1,24 @@
+# 白名单制：本仓库只包含 README / docs/ / archive/
+# 其余一切文件不入库（主公 2026-10-14 铁律）
+
+# 内部与运营物料（永不上传）
+*.zip
+方案*
+指引*
+aihot-product/
+aihot-biz/
+wechat/
+.workbuddy/
+.wbapp_*
+memory/
+
+# 敏感与凭据（永不入库）
+*.pem
+*.key
+id_*
+.env
+.env.*
+
+# 系统文件
+Thumbs.db
+.DS_Store
