@@ -1,24 +1,19 @@
-# 白名单制：本仓库只包含 README / docs/ / archive/
-# 其余一切文件不入库（主公 2026-10-14 铁律）
+# OS / editor artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
 
-# 内部与运营物料（永不上传）
-*.zip
-方案*
-指引*
-aihot-product/
-aihot-biz/
-wechat/
-.workbuddy/
-.wbapp_*
-memory/
-
-# 敏感与凭据（永不入库）
-*.pem
-*.key
-id_*
+# Secrets & local credentials
 .env
 .env.*
+*.pem
+*.key
+*_rsa
+*_ed25519
 
-# 系统文件
-Thumbs.db
-.DS_Store
+# Temp & build artifacts
+*.tmp
+*.zip
+node_modules/
+__pycache__/
