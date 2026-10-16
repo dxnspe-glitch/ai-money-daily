@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 日报 · 2026年10月16日 星期五</title>
+<style>
+:root{
+  --bg:#0c0e14; --bg2:#11141d; --card:#161a25; --card2:#1b2030;
+  --bd:#232a3a; --tx:#e7ecf5; --mut:#9aa6bd; --mut2:#6b768c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1a1f33 0%,var(--bg) 55%) fixed,var(--bg);
+  color:var(--tx); line-height:1.6; padding-bottom:80px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:54px 0 26px;text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:3px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  background:rgba(255,255,255,.02)
+}
+.hero h1{
+  font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+  background:linear-gradient(92deg,#a78bfa 0%,#60a5fa 38%,#34d399 70%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .date{font-size:clamp(16px,2.4vw,22px);color:var(--tx);font-weight:600;margin-top:10px}
+.hero .sub{color:var(--mut);font-size:14px;margin-top:6px}
+.hero .meta{color:var(--mut2);font-size:13px;margin-top:4px}
+.hstats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hstat{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:16px 22px;min-width:148px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  border-top:3px solid var(--c);
+}
+.hstat-emoji{font-size:22px}
+.hstat-num{font-size:30px;font-weight:800;color:var(--c);line-height:1.1}
+.hstat-label{font-size:12.5px;color:var(--mut)}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(12,14,20,.82);border-bottom:1px solid var(--bd);
+  margin-top:14px;
+}
+.nav-inner{display:flex;flex-wrap:wrap;gap:6px;padding:11px 20px;max-width:1180px;margin:0 auto}
+.nav-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--mut);
+  padding:7px 13px;border:1px solid var(--bd);border-radius:999px;
+  transition:.18s;background:rgba(255,255,255,.02)
+}
+.nav-link:hover{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav-link .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.nav-link .cnt{font-size:11px;color:var(--mut2);background:rgba(255,255,255,.05);border-radius:999px;padding:1px 7px}
+
+/* SECTIONS */
+.section{padding:38px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-emoji{font-size:26px}
+.sec-title{font-size:23px;font-weight:750}
+.sec-cnt{margin-left:auto;font-size:13px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:3px 12px;background:rgba(255,255,255,.02)}
+.sec-title::after{content:"";display:block;height:3px;width:46px;margin-top:6px;border-radius:3px;background:var(--c)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c);opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 34px -16px var(--c)}
+.card-top{display:flex;align-items:center;gap:10px}
+.badge{
+  font-size:14px;font-weight:800;color:var(--c);min-width:38px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--c) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:9px
+}
+.chip{
+  font-size:12px;color:var(--mut);background:rgba(255,255,255,.04);
+  border:1px solid var(--bd);border-radius:999px;padding:4px 11px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%
+}
+.card-title{font-size:16.5px;font-weight:700;line-height:1.42}
+.card-title a{transition:.15s}
+.card-title a:hover{color:var(--c)}
+.card-sum{font-size:14px;color:var(--mut);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--bd);padding-top:11px;margin-top:2px}
+.time{font-size:12.5px;color:var(--mut2)}
+.orig{font-size:13px;font-weight:600;color:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:9px;padding:5px 12px;
+  transition:.15s;white-space:nowrap}
+.orig:hover{background:var(--c);color:#0c0e14}
+.card.opp{background:linear-gradient(180deg,#1a1526,#211a2e)}
+.opp-btn{
+  font-size:13px;font-weight:600;color:#f59e0b;cursor:pointer;
+  background:color-mix(in srgb,#f59e0b 12%,transparent);
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;
+  padding:6px 14px;transition:.15s;font-family:inherit
+}
+.opp-btn:hover{background:#f59e0b;color:#0c0e14}
+
+/* 商机详情模态框 */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-mask{position:absolute;inset:0;background:rgba(6,8,14,.72);backdrop-filter:blur(4px)}
+.modal-box{
+  position:relative;max-width:600px;width:100%;max-height:86vh;overflow:auto;
+  background:linear-gradient(180deg,#1b2030,#151927);
+  border:1px solid color-mix(in srgb,#f59e0b 40%,var(--bd));border-radius:18px;
+  padding:24px 26px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)
+}
+.modal-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mut);
+  font-size:19px;line-height:1;cursor:pointer;transition:.15s
+}
+.modal-close:hover{color:var(--tx);border-color:var(--mut)}
+.modal-tag{display:inline-block;font-size:12px;color:#f59e0b;border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);
+  border-radius:999px;padding:3px 12px;background:color-mix(in srgb,#f59e0b 10%,transparent);margin-bottom:10px}
+.modal-title{font-size:21px;font-weight:750;line-height:1.35;margin-bottom:8px}
+.modal-signal{font-size:13.5px;color:var(--mut);background:rgba(255,255,255,.03);
+  border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.modal-body{display:flex;flex-direction:column;gap:14px}
+.mrow{display:flex;flex-direction:column;gap:4px}
+.mk{font-size:12.5px;font-weight:600;color:#f59e0b;letter-spacing:.5px}
+.mrow p{font-size:14px;color:var(--tx);line-height:1.65}
+.mrow.warn{border-left:3px solid #f87171;background:rgba(248,113,113,.06);
+  border-radius:0 10px 10px 0;padding:6px 14px 8px 12px;margin-left:2px}
+.mk.warn{color:#f87171}
+.opp-link{display:inline-block;margin-top:18px;font-size:13.5px;font-weight:600;color:#f59e0b;
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;padding:7px 14px;transition:.15s}
+.opp-link:hover{background:#f59e0b;color:#0c0e14}
+
+/* FOOTER */
+.foot{margin-top:46px;padding:22px 0 8px;border-top:1px solid var(--bd);
+  color:var(--mut2);font-size:13px;text-align:center;line-height:1.9}
+.foot a{color:var(--mut)}
+.to-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#0c0e14;font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 26px -10px #60a5fa;opacity:0;pointer-events:none;transition:.25s;z-index:30
+}
+.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:560px){.hstat{min-width:44%}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <span class="kicker">AI · HOT · DAILY</span>
+  <h1>AI HOT 日报</h1>
+  <div class="date">2026年10月16日 星期五</div>
+  <div class="sub">今日 AI 圈精选 · 共 12 条</div>
+  <div class="meta">生成于 10月16日 08:00（北京时间） ｜ 收录区间 10月15日 08:00（北京时间） – 10月16日 08:00（北京时间）</div>
+  <div class="hstats"><div class="hstat" style="--c:#a78bfa"><span class="hstat-emoji">🧠</span><span class="hstat-num">4</span><span class="hstat-label">模型发布/更新</span></div><div class="hstat" style="--c:#60a5fa"><span class="hstat-emoji">🚀</span><span class="hstat-num">3</span><span class="hstat-label">产品发布/更新</span></div><div class="hstat" style="--c:#34d399"><span class="hstat-emoji">📊</span><span class="hstat-num">4</span><span class="hstat-label">行业动态</span></div><div class="hstat" style="--c:#f472b6"><span class="hstat-emoji">💡</span><span class="hstat-num">1</span><span class="hstat-label">技巧与观点</span></div><div class="hstat" style="--c:#f59e0b"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">今日商机</span></div></div>
+</header>
+
+<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#sec-models" style="--c:#a78bfa"><span class="dot"></span>模型发布/更新<span class="cnt">4</span></a><a class="nav-link" href="#sec-products" style="--c:#60a5fa"><span class="dot"></span>产品发布/更新<span class="cnt">3</span></a><a class="nav-link" href="#sec-industry" style="--c:#34d399"><span class="dot"></span>行业动态<span class="cnt">4</span></a><a class="nav-link" href="#sec-tips" style="--c:#f472b6"><span class="dot"></span>技巧与观点<span class="cnt">1</span></a><a class="nav-link" href="#sec-opportunities" style="--c:#f59e0b"><span class="dot"></span>今日商机<span class="cnt">3</span></a></div></nav>
+
+<main class="wrap">
+
+    <section id="sec-models" class="section" style="--c:#a78bfa">
+      <div class="sec-head">
+        <span class="sec-emoji">🧠</span>
+        <h2 class="sec-title">模型发布/更新</h2>
+        <span class="sec-cnt">4 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">01</span>
+            <span class="chip" title="PyTorch：Blog（RSS）">PyTorch：Blog（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://pytorch.org/blog/muse-spark-open/" target="_blank" rel="noopener noreferrer">Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文</a>
+          </h3>
+          <p class="card-sum">Meta 发布开源权重模型 Muse Spark Open，已在 Hugging Face 以 Muse Model …</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://pytorch.org/blog/muse-spark-open/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">02</span>
+            <span class="chip" title="NVIDIA Blog（RSS）">NVIDIA Blog（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/" target="_blank" rel="noopener noreferrer">NVIDIA 发布开源 Nemotron 3.5 Super VL 及 Bolt 两款端侧模型</a>
+          </h3>
+          <p class="card-sum">NVIDIA 发布开源 1200 亿参数的 Nemotron 3.5 Super VL 多模态模型，称在其类别中任务完…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">03</span>
+            <span class="chip" title="Black Forest Labs：Blog（网页）">Black Forest Labs：Blog（网页）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://bfl.ai/blog/flux-3-image-klein" target="_blank" rel="noopener noreferrer">Black Forest Labs 发布开源文生图模型 FLUX 3 Image Klein（5.6B）</a>
+          </h3>
+          <p class="card-sum">Black Forest Labs 发布 5.6B 参数开源权重模型 FLUX 3 Image Klein，支持文生图…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://bfl.ai/blog/flux-3-image-klein" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">04</span>
+            <span class="chip" title="X：阶跃星辰 StepFun (@StepFun_ai)">X：阶跃星辰 StepFun (@StepFun_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/StepFun_ai/status/2110717330657616092" target="_blank" rel="noopener noreferrer">阶跃星辰开放 Step 5 Preview 权重</a>
+          </h3>
+          <p class="card-sum">阶跃星辰（StepFun）宣布 Step 5 Preview 开放权重，BF16 和 FP8 权重已上线 Huggin…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://x.com/StepFun_ai/status/2110717330657616092" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-products" class="section" style="--c:#60a5fa">
+      <div class="sec-head">
+        <span class="sec-emoji">🚀</span>
+        <h2 class="sec-title">产品发布/更新</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">05</span>
+            <span class="chip" title="X：ChatGPT (@ChatGPT)">X：ChatGPT (@ChatGPT)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/ChatGPT/status/2110823738531037651" target="_blank" rel="noopener noreferrer">ChatGPT 为 Chrome 用户新增标签页读取与控制能力</a>
+          </h3>
+          <p class="card-sum">ChatGPT 官宣面向 Chrome 用户带来升级，把 computer use 能力引入 Chrome。在聊天中，…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://x.com/ChatGPT/status/2110823738531037651" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">06</span>
+            <span class="chip" title="X：可灵 Kling AI (@Kling_ai)">X：可灵 Kling AI (@Kling_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/Kling_ai/status/2110747537187709424" target="_blank" rel="noopener noreferrer">可灵 Kling 4.0 正式全量开放，新增 MCP 和 CLI 接入</a>
+          </h3>
+          <p class="card-sum">可灵（Kling AI）宣布 Kling 4.0 正式全量开放，用户可通过 kling.ai 全新创作界面使用，并新增…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://x.com/Kling_ai/status/2110747537187709424" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">07</span>
+            <span class="chip" title="Comfy Blog">Comfy Blog</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://blog.comfy.org/p/krea-3-is-now-available-via-partner" target="_blank" rel="noopener noreferrer">Krea 3 图像模型通过 ComfyUI Partner Nodes 上线</a>
+          </h3>
+          <p class="card-sum">Krea 3 图像模型现已在 ComfyUI 通过 Partner Nodes 提供，主打基于参考图的生成与编辑。模型…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://blog.comfy.org/p/krea-3-is-now-available-via-partner" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-industry" class="section" style="--c:#34d399">
+      <div class="sec-head">
+        <span class="sec-emoji">📊</span>
+        <h2 class="sec-title">行业动态</h2>
+        <span class="sec-cnt">4 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">08</span>
+            <span class="chip" title="The Decoder：AI News（RSS）">The Decoder：AI News（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/" target="_blank" rel="noopener noreferrer">Anthropic Q3营收达168亿美元但增速放缓，11月IPO前估值预期或下调</a>
+          </h3>
+          <p class="card-sum">Anthropic在面向潜在投资者的会议上公布Q3营收168亿美元，环比增长约45%，但明显低于Q2超140%的增速。…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://the-decoder.com/anthropics-q3-revenue-hits-16-8b-but-growth-slows-ahead-of-planned-november-ipo/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">09</span>
+            <span class="chip" title="IT之家·人工智能">IT之家·人工智能</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.ithome.com/1/013/160.htm" target="_blank" rel="noopener noreferrer">美国 8 州起诉 OpenAI，指控 ChatGPT 指导青少年自伤或伤害他人</a>
+          </h3>
+          <p class="card-sum">当地时间 14 日，美国 8 个州的总检察长分别在州法院起诉 OpenAI，指控 ChatGPT 指导包括青少年在内的…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://www.ithome.com/1/013/160.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">10</span>
+            <span class="chip" title="The Verge：AI（RSS）">The Verge：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab" target="_blank" rel="noopener noreferrer">The Verge 实测 Eiliko 机器人玩具：68000 台设备数据可被任意访问并可远程劫持</a>
+          </h3>
+          <p class="card-sum">The Verge 记者与黑客 Sammy Azdoufal 实测发现，Energize Lab 的 Eiliko 机…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">11</span>
+            <span class="chip" title="Anthropic：Newsroom（网页）">Anthropic：Newsroom（网页）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.anthropic.com/news/an-update-on-independent-evaluators" target="_blank" rel="noopener noreferrer">Anthropic 公布独立评估机制细节，METR 团队获类员工访问权限</a>
+          </h3>
+          <p class="card-sum">Anthropic 宣布已向评估前沿 AI 模型的非营利机构 METR 的六名员工提供类员工访问权限，包括公司硬件、办…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://www.anthropic.com/news/an-update-on-independent-evaluators" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-tips" class="section" style="--c:#f472b6">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">技巧与观点</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">12</span>
+            <span class="chip" title="X：卡兹克 (@Khazix0918)">X：卡兹克 (@Khazix0918)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/Khazix0918/status/2110587546271191166" target="_blank" rel="noopener noreferrer">卡兹克实测开源Skill Anatomy，一句话让AI生成原理科普视频</a>
+          </h3>
+          <p class="card-sum">作者卡兹克分享实测开源Skill Anatomy（GitHub：https://github.com/wheresry…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月16日 星期五</span>
+            <a class="orig" href="https://x.com/Khazix0918/status/2110587546271191166" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+
+    <section id="sec-opportunities" class="section" style="--c:#f59e0b">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">今日商机</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 01</span>
+            <span class="chip">外贸·旺季窗口期</span>
+          </div>
+          <h3 class="card-title">亚马逊 Q4 旺季「价格体系+促销叠加」体检与促销排期代办</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>10月14日雨果网解读亚马逊官方《价格管理手册》：2026年5月18日起常规价格改按含促销价计算、优惠券+价格折扣自动叠加、同一ASIN 7天内禁重复秒杀/21天内禁重复Z划算——黑五网一临近，定价失误会直接打穿常规价并丢掉大促资格</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(1)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 02</span>
+            <span class="chip">外贸·窗口期</span>
+          </div>
+          <h3 class="card-title">eBay Live 全品类开放：跨境英语直播代播与冷启动代办</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>10月14日雨果网报道 eBay《2026年循环经济电商报告》：eBay Live 已面向中国卖家开放全品类申请，31% 受访者看过购物直播、12% 直接下单，欧美直播电商渗透率仍处早期，平台正主动放闸</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(2)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 03</span>
+            <span class="chip">海外·开发者服务向</span>
+          </div>
+          <h3 class="card-title">vibe-coded AI 应用上线前安全体检与修复指导</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>10月15日 Product Hunt 榜单 Epherem 上榜：专门扫描 AI 生成（vibe-coded）应用的登录与数据库安全漏洞——vibe coding 应用海量上线、原生安全隐患成为公认痛点，同日 Tiden（意图验证）、Inferock（推理问责）等安全可信类工具密集上榜</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(3)">查看分析</button>
+          </div>
+        </article></div>
+    </section>
+</main>
+
+<footer class="foot wrap">
+  本日报共 <b style="color:var(--mut)">12</b> 条 ｜ 数据来源：公开资讯渠道自动化聚合，每条附原文出处<br>
+  生成于 10月16日 08:00（北京时间） ｜ 收录区间 10月15日 08:00（北京时间） – 10月16日 08:00（北京时间）
+</footer>
+
+
+        <div class="modal" id="opp-modal-1">
+          <div class="modal-mask" onclick="closeOpp(1)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(1)" title="关闭">×</button>
+            <div class="modal-tag">外贸·旺季窗口期</div>
+            <h3 class="modal-title">亚马逊 Q4 旺季「价格体系+促销叠加」体检与促销排期代办</h3>
+            <p class="modal-signal">信号依据：10月14日雨果网解读亚马逊官方《价格管理手册》：2026年5月18日起常规价格改按含促销价计算、优惠券+价格折扣自动叠加、同一ASIN 7天内禁重复秒杀/21天内禁重复Z划算——黑五网一临近，定价失误会直接打穿常规价并丢掉大促资格</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>Q4 要冲黑五网一、SKU 在 20-500 个区间的亚马逊中小卖家——旺季促销排期普遍靠拍脑袋，不知道自己的划线价/常规价已被频繁折扣打穿。触达：跨境卖家社群、雨果网/知无不言投稿、旺季服务商联盟互推。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>帮卖家逐 ASIN 拉价格历史、核对常规价与促销叠加规则，输出旺季促销排期表与保价方案，守住秒杀资格和利润；官方手册刚出、旺季报名窗口就在眼前，付费动机是保住一年最大的一波销量。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>本质是价格数据批量分析+平台规则研读，AI 拉取与比对价格历史，1-2 人可同时服务多家店铺；SOP 化后每单交付 1-2 天，无需任何平台资质。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：选品/价格数据工具订阅每月几百元（估算）+人力，无固定投入。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>第一，价格诊断不是替客户乱改价——常规价算法涉及 90 天价格历史，错误调价可能让 Listing 失去价格竞争力甚至购物车，建议必须附官方规则出处；第二，促销叠加规则各站点（美/欧/日）细节不同，照搬美区结论会坑了欧洲站客户；第三，旺季前「旺季服务商」围猎卖家、靠低价抢单的很多，没有免费体检报告和真实案例很难获客，前期别指望快钱。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：产出《旺季促销叠加自查表》免费投放卖家社群，给 3 家卖家做免费 ASIN 价格体检转付费排期代办。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.cifnews.com/article/189428" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-2">
+          <div class="modal-mask" onclick="closeOpp(2)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(2)" title="关闭">×</button>
+            <div class="modal-tag">外贸·窗口期</div>
+            <h3 class="modal-title">eBay Live 全品类开放：跨境英语直播代播与冷启动代办</h3>
+            <p class="modal-signal">信号依据：10月14日雨果网报道 eBay《2026年循环经济电商报告》：eBay Live 已面向中国卖家开放全品类申请，31% 受访者看过购物直播、12% 直接下单，欧美直播电商渗透率仍处早期，平台正主动放闸</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>有稳定货盘（尤其二手电子、家居、收藏品类）、有货不会播的工厂型与贸易型卖家，以及想赶平台直播红利的品牌出海团队。触达：跨境卖家微信群、雨果/亿邦投稿、eBay 官方招商经理渠道。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>帮卖家开通 eBay Live、搭直播间、定排期话术并代播冷启动，收建店代办费+代播月费或销售分成；欧美直播购物刚起量，早入场者能吃到平台流量倾斜与低竞争红利。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>1 名主播+1 名运营即可起播，AI 承担脚本撰写、翻译、实时字幕和复盘数据，人力集中在直播时段；国内直播方法论可直接迁移，经验壁垒即竞争力。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低到中（估算）：直播间基础设备几千元（估算）+英语主播人力（可远程兼职），先用客户货盘代播分成模式可零库存启动。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>第一，欧美观众直播下单习惯远不如国内成熟，出单密度低，别按国内 ROI 向客户承诺销量，先小批量验证再签月费；第二，eBay 10月15日起把直播交易移出卖家评级与 Top Rated Plus 评定，平台规则仍在摇摆，政策风险要在合同里写清；第三，直播窗口用第三方货盘涉及授权与售后责任，必须书面约定，别裸接。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：申请 eBay Live 全品类权限，选 1 个二手电子或家居类目试播 2 场，把在线人数与转化数据做成案例投放社群。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.cifnews.com/article/189434" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-3">
+          <div class="modal-mask" onclick="closeOpp(3)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(3)" title="关闭">×</button>
+            <div class="modal-tag">海外·开发者服务向</div>
+            <h3 class="modal-title">vibe-coded AI 应用上线前安全体检与修复指导</h3>
+            <p class="modal-signal">信号依据：10月15日 Product Hunt 榜单 Epherem 上榜：专门扫描 AI 生成（vibe-coded）应用的登录与数据库安全漏洞——vibe coding 应用海量上线、原生安全隐患成为公认痛点，同日 Tiden（意图验证）、Inferock（推理问责）等安全可信类工具密集上榜</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>用 Claude/Cursor/Lovable 造出 web 应用但完全不懂安全的海外 indie hacker 和微型 SaaS 团队，上线收付费用户前必须过安全关。触达：X 独立开发圈、Product Hunt、Reddit 的 r/SaaS 与 r/indiehackers。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>提供固定价格的一次性「上线前安全体检」：扫登录、数据库、密钥泄露等高频漏洞，出人话版报告+修复指导；客户自己不会查、官方扫描器只给英文报错堆栈，付费买的是「敢收钱上线」的安心。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>2 人即可做：AI 扫描器跑检测+人工复核与修复建议，标准清单化交付；无需安全资质（只做授权范围内体检），客单 99-299 美元（估算）按次收费边际成本极低。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>—</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>第一，安全服务责任边界必须写死——报告附免责声明「尽力检查不等于渗透测试保证」，客户应用被打穿容易扯皮；第二，没拿到书面授权就对客户系统做主动扫描可能触碰未授权访问法律红线，只扫客户提供的环境；第三，Snyk 等大厂扫描器在免费化，纯工具跑分必被卷死，差异化要靠 AI 生成代码的上下文解读和保姆级修复指导。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：用开源扫描器+自建清单给 2 个海外 indie 产品做免费体检，晒「发现的漏洞+修复前后对比」发 X 和 Hacker News 引客。</p></div>
+            </div>
+            <a class="opp-link" href="https://startupcorners.com/digest/product-digest-2026-10-15" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('show', window.scrollY>520);
+  });
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.openOpp=function(i){document.getElementById('opp-modal-'+i).classList.add('show')};
+  window.closeOpp=function(i){document.getElementById('opp-modal-'+i).classList.remove('show')};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(function(m){m.classList.remove('show')})}
+  });
+})();
+</script>
+</body>
+</html>
