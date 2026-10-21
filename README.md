@@ -21,6 +21,7 @@
 
 - 🌐 在线阅读（含完整交互式仪表盘）：[ai-money-daily.app.workbuddy.host](https://ai-money-daily-11672.app.workbuddy.host/)
 - 💬 微信公众号：**AI 搞钱早班车**（微信搜索即可关注，每天 9:00 送达）
+- 🛠️ 想自己跑一条同款流水线：[AI 日报自动化工作流包（¥99 早鸟）](https://mbd.pub/o/bread/YZaVm5ptaA==)
 
 ## 免责声明
 
