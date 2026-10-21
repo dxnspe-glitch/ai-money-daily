@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 日报 · 2026年10月21日 星期三</title>
+<style>
+:root{
+  --bg:#0c0e14; --bg2:#11141d; --card:#161a25; --card2:#1b2030;
+  --bd:#232a3a; --tx:#e7ecf5; --mut:#9aa6bd; --mut2:#6b768c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1a1f33 0%,var(--bg) 55%) fixed,var(--bg);
+  color:var(--tx); line-height:1.6; padding-bottom:80px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:54px 0 26px;text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:3px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  background:rgba(255,255,255,.02)
+}
+.hero h1{
+  font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+  background:linear-gradient(92deg,#a78bfa 0%,#60a5fa 38%,#34d399 70%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .date{font-size:clamp(16px,2.4vw,22px);color:var(--tx);font-weight:600;margin-top:10px}
+.hero .sub{color:var(--mut);font-size:14px;margin-top:6px}
+.hero .meta{color:var(--mut2);font-size:13px;margin-top:4px}
+.hstats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hstat{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:16px 22px;min-width:148px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  border-top:3px solid var(--c);
+}
+.hstat-emoji{font-size:22px}
+.hstat-num{font-size:30px;font-weight:800;color:var(--c);line-height:1.1}
+.hstat-label{font-size:12.5px;color:var(--mut)}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(12,14,20,.82);border-bottom:1px solid var(--bd);
+  margin-top:14px;
+}
+.nav-inner{display:flex;flex-wrap:wrap;gap:6px;padding:11px 20px;max-width:1180px;margin:0 auto}
+.nav-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--mut);
+  padding:7px 13px;border:1px solid var(--bd);border-radius:999px;
+  transition:.18s;background:rgba(255,255,255,.02)
+}
+.nav-link:hover{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav-link .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.nav-link .cnt{font-size:11px;color:var(--mut2);background:rgba(255,255,255,.05);border-radius:999px;padding:1px 7px}
+
+/* SECTIONS */
+.section{padding:38px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-emoji{font-size:26px}
+.sec-title{font-size:23px;font-weight:750}
+.sec-cnt{margin-left:auto;font-size:13px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:3px 12px;background:rgba(255,255,255,.02)}
+.sec-title::after{content:"";display:block;height:3px;width:46px;margin-top:6px;border-radius:3px;background:var(--c)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c);opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 34px -16px var(--c)}
+.card-top{display:flex;align-items:center;gap:10px}
+.badge{
+  font-size:14px;font-weight:800;color:var(--c);min-width:38px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--c) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:9px
+}
+.chip{
+  font-size:12px;color:var(--mut);background:rgba(255,255,255,.04);
+  border:1px solid var(--bd);border-radius:999px;padding:4px 11px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%
+}
+.card-title{font-size:16.5px;font-weight:700;line-height:1.42}
+.card-title a{transition:.15s}
+.card-title a:hover{color:var(--c)}
+.card-sum{font-size:14px;color:var(--mut);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--bd);padding-top:11px;margin-top:2px}
+.time{font-size:12.5px;color:var(--mut2)}
+.orig{font-size:13px;font-weight:600;color:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:9px;padding:5px 12px;
+  transition:.15s;white-space:nowrap}
+.orig:hover{background:var(--c);color:#0c0e14}
+.card.opp{background:linear-gradient(180deg,#1a1526,#211a2e)}
+.opp-btn{
+  font-size:13px;font-weight:600;color:#f59e0b;cursor:pointer;
+  background:color-mix(in srgb,#f59e0b 12%,transparent);
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;
+  padding:6px 14px;transition:.15s;font-family:inherit
+}
+.opp-btn:hover{background:#f59e0b;color:#0c0e14}
+
+/* 商机详情模态框 */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-mask{position:absolute;inset:0;background:rgba(6,8,14,.72);backdrop-filter:blur(4px)}
+.modal-box{
+  position:relative;max-width:600px;width:100%;max-height:86vh;overflow:auto;
+  background:linear-gradient(180deg,#1b2030,#151927);
+  border:1px solid color-mix(in srgb,#f59e0b 40%,var(--bd));border-radius:18px;
+  padding:24px 26px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)
+}
+.modal-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mut);
+  font-size:19px;line-height:1;cursor:pointer;transition:.15s
+}
+.modal-close:hover{color:var(--tx);border-color:var(--mut)}
+.modal-tag{display:inline-block;font-size:12px;color:#f59e0b;border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);
+  border-radius:999px;padding:3px 12px;background:color-mix(in srgb,#f59e0b 10%,transparent);margin-bottom:10px}
+.modal-title{font-size:21px;font-weight:750;line-height:1.35;margin-bottom:8px}
+.modal-signal{font-size:13.5px;color:var(--mut);background:rgba(255,255,255,.03);
+  border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.modal-body{display:flex;flex-direction:column;gap:14px}
+.mrow{display:flex;flex-direction:column;gap:4px}
+.mk{font-size:12.5px;font-weight:600;color:#f59e0b;letter-spacing:.5px}
+.mrow p{font-size:14px;color:var(--tx);line-height:1.65}
+.mrow.warn{border-left:3px solid #f87171;background:rgba(248,113,113,.06);
+  border-radius:0 10px 10px 0;padding:6px 14px 8px 12px;margin-left:2px}
+.mk.warn{color:#f87171}
+.opp-link{display:inline-block;margin-top:18px;font-size:13.5px;font-weight:600;color:#f59e0b;
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;padding:7px 14px;transition:.15s}
+.opp-link:hover{background:#f59e0b;color:#0c0e14}
+
+/* FOOTER */
+.foot{margin-top:46px;padding:22px 0 8px;border-top:1px solid var(--bd);
+  color:var(--mut2);font-size:13px;text-align:center;line-height:1.9}
+.foot a{color:var(--mut)}
+.to-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#0c0e14;font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 26px -10px #60a5fa;opacity:0;pointer-events:none;transition:.25s;z-index:30
+}
+.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:560px){.hstat{min-width:44%}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <span class="kicker">AI · HOT · DAILY</span>
+  <h1>AI HOT 日报</h1>
+  <div class="date">2026年10月21日 星期三</div>
+  <div class="sub">今日 AI 圈精选 · 共 12 条</div>
+  <div class="meta">生成于 10月21日 08:00（北京时间） ｜ 收录区间 10月20日 08:00（北京时间） – 10月21日 08:00（北京时间）</div>
+  <div class="hstats"><div class="hstat" style="--c:#a78bfa"><span class="hstat-emoji">🧠</span><span class="hstat-num">1</span><span class="hstat-label">模型发布/更新</span></div><div class="hstat" style="--c:#60a5fa"><span class="hstat-emoji">🚀</span><span class="hstat-num">4</span><span class="hstat-label">产品发布/更新</span></div><div class="hstat" style="--c:#34d399"><span class="hstat-emoji">📊</span><span class="hstat-num">6</span><span class="hstat-label">行业动态</span></div><div class="hstat" style="--c:#fbbf24"><span class="hstat-emoji">📄</span><span class="hstat-num">1</span><span class="hstat-label">论文研究</span></div><div class="hstat" style="--c:#f59e0b"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">今日商机</span></div></div>
+</header>
+
+<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#sec-models" style="--c:#a78bfa"><span class="dot"></span>模型发布/更新<span class="cnt">1</span></a><a class="nav-link" href="#sec-products" style="--c:#60a5fa"><span class="dot"></span>产品发布/更新<span class="cnt">4</span></a><a class="nav-link" href="#sec-industry" style="--c:#34d399"><span class="dot"></span>行业动态<span class="cnt">6</span></a><a class="nav-link" href="#sec-papers" style="--c:#fbbf24"><span class="dot"></span>论文研究<span class="cnt">1</span></a><a class="nav-link" href="#sec-opportunities" style="--c:#f59e0b"><span class="dot"></span>今日商机<span class="cnt">3</span></a></div></nav>
+
+<main class="wrap">
+
+    <section id="sec-models" class="section" style="--c:#a78bfa">
+      <div class="sec-head">
+        <span class="sec-emoji">🧠</span>
+        <h2 class="sec-title">模型发布/更新</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">01</span>
+            <span class="chip" title="Inception Labs：Blog（网页）">Inception Labs：Blog（网页）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.inceptionlabs.ai/blog/introducing-mercury-3" target="_blank" rel="noopener noreferrer">Inception Labs 发布扩散大语言模型 Mercury 3，速度达 1068 tokens/秒</a>
+          </h3>
+          <p class="card-sum">Inception Labs 发布扩散式大语言模型 Mercury 3，称其在多项基准上超过 GPT-6 Luna 和…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://www.inceptionlabs.ai/blog/introducing-mercury-3" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-products" class="section" style="--c:#60a5fa">
+      <div class="sec-head">
+        <span class="sec-emoji">🚀</span>
+        <h2 class="sec-title">产品发布/更新</h2>
+        <span class="sec-cnt">4 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">02</span>
+            <span class="chip" title="公众号：DeepSeek（深度求索）">公众号：DeepSeek（深度求索）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://mp.weixin.qq.com/s?__biz=Mzk0OTYwNzc3NQ%3D%3D&amp;mid=2247485884&amp;idx=1&amp;sn=d457981abe7db1f1b5d600fc109dc836" target="_blank" rel="noopener noreferrer">DeepSeek 全面开源内部推理框架 DeepInfer</a>
+          </h3>
+          <p class="card-sum">DeepSeek 宣布将内部推理框架 DeepInfer 全面开源，并同步开源生产级 Token 编解码组件 deep…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://mp.weixin.qq.com/s?__biz=Mzk0OTYwNzc3NQ%3D%3D&amp;mid=2247485884&amp;idx=1&amp;sn=d457981abe7db1f1b5d600fc109dc836" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">03</span>
+            <span class="chip" title="PyTorch：Blog（RSS）">PyTorch：Blog（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://pytorch.org/blog/introducing-torchtpu/" target="_blank" rel="noopener noreferrer">Google 与 Meta 发布 TorchTPU：PyTorch 原生 TPU 后端</a>
+          </h3>
+          <p class="card-sum">Google 与 Meta 发布开源项目 TorchTPU，为 Google TPU 提供原生 PyTorch 后端，…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://pytorch.org/blog/introducing-torchtpu/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">04</span>
+            <span class="chip" title="X：ChatGPT (@ChatGPT)">X：ChatGPT (@ChatGPT)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/ChatGPT/status/2112597766333673624" target="_blank" rel="noopener noreferrer">ChatGPT 推出 Locked Chats，可用 PIN 或生物识别锁定敏感对话</a>
+          </h3>
+          <p class="card-sum">ChatGPT 推出 Locked Chats 功能，把敏感对话从常规历史记录和搜索中移入受保护空间。用户在网页端和桌…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://x.com/ChatGPT/status/2112597766333673624" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">05</span>
+            <span class="chip" title="Google Developers Blog（RSS）">Google Developers Blog（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/" target="_blank" rel="noopener noreferrer">Google 发布 vLLM 与 SGLang 的 TorchTPU 原生推理引擎</a>
+          </h3>
+          <p class="card-sum">Google 在 PyTorch 相关公告中推出基于 TorchTPU 的 vLLM 和 SGLang 原生 PyTo…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-industry" class="section" style="--c:#34d399">
+      <div class="sec-head">
+        <span class="sec-emoji">📊</span>
+        <h2 class="sec-title">行业动态</h2>
+        <span class="sec-cnt">6 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">06</span>
+            <span class="chip" title="X：Rohan Paul (@rohanpaul_ai)">X：Rohan Paul (@rohanpaul_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/rohanpaul_ai/status/2112455383356989598" target="_blank" rel="noopener noreferrer">路透：OpenAI 拟在 Anthropic 上市前加速融资约 300 亿美元，估值超 1.4 万亿美元</a>
+          </h3>
+          <p class="card-sum">据 Reuters 报道，OpenAI 正赶在 Anthropic 上市前洽谈融资约 300 亿美元，估值超 1.4 …</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://x.com/rohanpaul_ai/status/2112455383356989598" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">07</span>
+            <span class="chip" title="TechCrunch：AI（RSS）">TechCrunch：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/" target="_blank" rel="noopener noreferrer">SpaceX 财报显示 AI 业务超预期，占收入 52%</a>
+          </h3>
+          <p class="card-sum">SpaceX 发布第三季度监管文件，披露营收 146 亿美元、净利润 44 亿美元，扭转去年同期 10 亿美元亏损。其…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">08</span>
+            <span class="chip" title="The Decoder：AI News（RSS）">The Decoder：AI News（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://the-decoder.com/army-cyber-commands-echotribble-would-turn-ai-agents-into-self-spreading-cyberweapons/" target="_blank" rel="noopener noreferrer">美国陆军网络司令部 ECHOTRIBBLE 项目拟将 AI 智能体变成自主扩散的网络武器</a>
+          </h3>
+          <p class="card-sum">据 The Intercept 获取的文件，美国陆军网络司令部（ARCYBER）正在开发代号 ECHOTRIBBLE …</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://the-decoder.com/army-cyber-commands-echotribble-would-turn-ai-agents-into-self-spreading-cyberweapons/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">09</span>
+            <span class="chip" title="Hacker News：AI 热帖">Hacker News：AI 热帖</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions" target="_blank" rel="noopener noreferrer">Redact 调查：WhatsApp 帮助页面隐藏 LLM 指令，让 AI 不推荐监管机构、不提 GDPR</a>
+          </h3>
+          <p class="card-sum">Redact 发现 WhatsApp 帮助中心页面向 LLM 发送用户看不到的隐藏指令，指示其支持聊天机器人不推荐数据…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">10</span>
+            <span class="chip" title="OpenAI：官网动态（RSS · 排除企业/客户案例）">OpenAI：官网动态（RSS · 排除企业/客户案例）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://openai.com/index/openai-to-acquire-orchestra-bio" target="_blank" rel="noopener noreferrer">OpenAI 收购药物研发平台 Orchestra Bio 并入 Rosalind 生命科学体系</a>
+          </h3>
+          <p class="card-sum">OpenAI 宣布收购 Orchestra Bio，一个帮助生物制药团队协调药物研发复杂流程的平台，其团队和技术将与 …</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://openai.com/index/openai-to-acquire-orchestra-bio" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">11</span>
+            <span class="chip" title="TechCrunch：AI（RSS）">TechCrunch：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/" target="_blank" rel="noopener noreferrer">Anthropic 云合作生变：AWS、Google、微软视其为竞争者</a>
+          </h3>
+          <p class="card-sum">据泄露给华尔街日报的 S-1 文件，Anthropic 难以从 AWS、Google 和 Microsoft 获得足够…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://techcrunch.com/2026/10/20/anthropics-cloud-partnerships-are-getting-messy/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-papers" class="section" style="--c:#fbbf24">
+      <div class="sec-head">
+        <span class="sec-emoji">📄</span>
+        <h2 class="sec-title">论文研究</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#fbbf24">
+          <div class="card-top">
+            <span class="badge">12</span>
+            <span class="chip" title="Anthropic：Research（发表成果 · 网页）">Anthropic：Research（发表成果 · 网页）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.anthropic.com/research/claude-scorpion-toxin-binder-design" target="_blank" rel="noopener noreferrer">Anthropic 用 Claude 设计出针对蝎子神经毒素的蛋白质迷你结合剂</a>
+          </h3>
+          <p class="card-sum">Anthropic 让内部研究模型在 Claude Science 中主要自主运行 64 小时，设计针对五种蝎子神经毒…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月21日 星期三</span>
+            <a class="orig" href="https://www.anthropic.com/research/claude-scorpion-toxin-binder-design" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+
+    <section id="sec-opportunities" class="section" style="--c:#f59e0b">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">今日商机</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 01</span>
+            <span class="chip">外贸·合规窗口期</span>
+          </div>
+          <h3 class="card-title">两用物项出口管制穿透跨境电商：商品判定自查+许可鉴别申请代办</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>10月19日商务部与海关总署联合发布2026年第52号公告，明确通过跨境电商、旅客携带、邮件、快件等渠道出口两用物项统一参照管制规则执行，并健全企业申诉鉴别与合规核查链条——过去靠「小包/跨境电商不算正式出口」的灰色空间被正式堵死</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(1)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 02</span>
+            <span class="chip">国内·服务型</span>
+          </div>
+          <h3 class="card-title">GLM-Legal 法律模型私有化部署：跨境合同与平台条款审查「不出域」服务</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>10月19日智谱开源法律专用大模型 GLM-Legal，支持合同审查、证据梳理与跨境合规研究，在 Vals AI 评测中以 19.2% 任务全通过率、86.23% 准确率位列 LegalBench 与 Harvey LAB 双榜开放权重模型首位；同日 Mistral 开源 Timestral 时间序列模型、亚马逊开源 TorchNeuron</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(2)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 03</span>
+            <span class="chip">海外·基础设施向</span>
+          </div>
+          <h3 class="card-title">TorchTPU 上线红利：帮 AI 应用团队做「GPU 到 TPU」推理成本迁移评估与 POC</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>10月21日 digest：Google 与 Meta 联合发布 TorchTPU（PyTorch 原生 TPU 后端），同日 Google 发布 vLLM 与 SGLang 的 TorchTPU 原生推理引擎——此前把模型迁到 TPU 需要大量定制改造，现在主流推理框架原生支持，迁移门槛一夜之间被拆掉，而 TPU 单位算力成本普遍低于同代 GPU</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(3)">查看分析</button>
+          </div>
+        </article></div>
+    </section>
+</main>
+
+<footer class="foot wrap">
+  本日报共 <b style="color:var(--mut)">12</b> 条 ｜ 数据来源：公开资讯渠道自动化聚合，每条附原文出处<br>
+  生成于 10月21日 08:00（北京时间） ｜ 收录区间 10月20日 08:00（北京时间） – 10月21日 08:00（北京时间）
+</footer>
+
+
+        <div class="modal" id="opp-modal-1">
+          <div class="modal-mask" onclick="closeOpp(1)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(1)" title="关闭">×</button>
+            <div class="modal-tag">外贸·合规窗口期</div>
+            <h3 class="modal-title">两用物项出口管制穿透跨境电商：商品判定自查+许可鉴别申请代办</h3>
+            <p class="modal-signal">信号依据：10月19日商务部与海关总署联合发布2026年第52号公告，明确通过跨境电商、旅客携带、邮件、快件等渠道出口两用物项统一参照管制规则执行，并健全企业申诉鉴别与合规核查链条——过去靠「小包/跨境电商不算正式出口」的灰色空间被正式堵死</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>做高技术含量或敏感工业品跨境生意的中小卖家与外贸工厂：精密仪器及配件、光学与激光器件、部分传感器、特种合金与化工品、无人机及零部件、部分芯片与测试设备类目。触达：外贸产业带工厂群（深圳/宁波/苏州）、阿里国际站与亚马逊工业品类卖家群、外贸圈公众号与货代渠道互推。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>过去卖家只关心平台合规和关税，现在多了一道「这东西能不能出口」的刑事级门槛——误报漏报不是罚款改链接，而是海关缉私立案。服务切两段：先按 HS 编码+技术参数做「两用物项判定自查表」（哪些 SKU 明确不管制、哪些需许可、哪些必须申请鉴别），再代跑商务部两用物项鉴别/许可申请流程。客户花几千块买的是「敢发货」的确定性。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>核心是法规检索+参数核对+表格申报，不需要进出口经营权也能做咨询与代办跑腿；AI 可批量比对管制清单与产品参数，个人或 2-3 人一周可出成品交付物，按 SKU 数量或类目打包收费。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：无硬件投入，成本是研读管制清单与公告的时间、少量法规数据库订阅（估算几百至一两千元/年）；若对接律所做背书可按单分成。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>第一，这是准法律意见，一旦你在报告里写「不属于管制物项」而实际属于，客户被立案会直接反噬你——交付物必须写成「自查建议+需客户书面确认」，并注明最终以商务主管部门鉴别结论为准，别越界当审批机关；第二，市面上已有大量「包过许可」的中介，实际是伪造最终用户证明，这条红线碰一次就完了，坚决不接「包过」单；第三，别接纯军品或明确列管清单内的擦边单，收益低风险极高。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：把两用物项清单与 52 号公告做成一份《跨境电商两用物项自查表》模板，先给 3 家做精密仪器/无人机的卖家免费试跑，换案例与转介绍。</p></div>
+            </div>
+            <a class="opp-link" href="http://mp.weixin.qq.com/s?__biz=MzIzOTY0ODc4OA==&amp;mid=2247484279&amp;idx=1&amp;sn=8e0488bf56553860dc9b80ea0e33be89" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-2">
+          <div class="modal-mask" onclick="closeOpp(2)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(2)" title="关闭">×</button>
+            <div class="modal-tag">国内·服务型</div>
+            <h3 class="modal-title">GLM-Legal 法律模型私有化部署：跨境合同与平台条款审查「不出域」服务</h3>
+            <p class="modal-signal">信号依据：10月19日智谱开源法律专用大模型 GLM-Legal，支持合同审查、证据梳理与跨境合规研究，在 Vals AI 评测中以 19.2% 任务全通过率、86.23% 准确率位列 LegalBench 与 Harvey LAB 双榜开放权重模型首位；同日 Mistral 开源 Timestral 时间序列模型、亚马逊开源 TorchNeuron</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>两类客户：一是中小跨境电商/外贸公司，手上有供应商协议、代理合同、平台条款、报关合规要点，既不敢往公网大模型里贴（商业机密+客户数据），又请不起常年法务；二是二三十人规模的中小律所与合规咨询公司，想给客户加一层合同初筛产能。触达：跨境卖家群与外贸服务商、律所主任圈、企业法务社群、本地商会。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>开源+可私有化正好命中「敏感文书不出域」这个刚需——帮客户在一台内网机器上跑合同审查与条款风险标注，配套他自己公司的审查要点库（哪些条款必须改、哪些赔偿上限不能签）。收费：部署费+年度维护+要点库定制，客户省的是「一份合同几千块的外部律师费」和「数据外泄风险」。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>模型开源免费、部署是标准动作（一台带显卡的机器或租 GPU 即可），2-3 人（1 部署+1 懂业务梳理要点库）能交付；卖点是「私有化+定制要点」，不是卖模型能力，正好避开大厂 API 的价格战。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：硬件可用客户自有服务器或租 GPU（估算每月几百至两三千元），人力是主要成本；前期投入是打磨 3-5 个行业审查要点模板的时间。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>第一，模型在 LegalBench 上是 19.2% 全通过率——这意味着八成任务做不全，任何「AI 出的法律意见直接给客户用」的承诺都是骗人，交付必须定位成「初筛+标注」，最终签字必须是人；第二，开源协议要逐条核实（是否允许商用、是否有用户规模限制），别默认开源即可商用；第三，法律 AI 在国内有执业边界，别包装成「替代律师」对外宣传，容易被律协和客户同时追责；第四，客户合同数据进了你的服务器，必须签数据处理协议，否则数据泄露责任全在你。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：本地部署 GLM-Legal 跑通，用 20 份脱敏跨境采购合同做一次审查准确率实测，整理成《合同初筛 demo 报告》发给 5 家中小律所与 3 家跨境卖家。</p></div>
+            </div>
+            <a class="opp-link" href="http://mp.weixin.qq.com/s?__biz=MzcwODQ1MDM2Ng==&amp;mid=2247483838&amp;idx=1&amp;sn=11b5a7655637437f98db5ed5fed26831" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-3">
+          <div class="modal-mask" onclick="closeOpp(3)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(3)" title="关闭">×</button>
+            <div class="modal-tag">海外·基础设施向</div>
+            <h3 class="modal-title">TorchTPU 上线红利：帮 AI 应用团队做「GPU 到 TPU」推理成本迁移评估与 POC</h3>
+            <p class="modal-signal">信号依据：10月21日 digest：Google 与 Meta 联合发布 TorchTPU（PyTorch 原生 TPU 后端），同日 Google 发布 vLLM 与 SGLang 的 TorchTPU 原生推理引擎——此前把模型迁到 TPU 需要大量定制改造，现在主流推理框架原生支持，迁移门槛一夜之间被拆掉，而 TPU 单位算力成本普遍低于同代 GPU</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>海外中小 AI 应用公司（5-50 人）：做 chat/agent/文档处理的 SaaS，token 成本占营收 20%-50%，被 GPU 账单和配额卡住；以及给企业做私有化推理部署的技术服务商。触达：LinkedIn 搜 AI startup CTO/Head of Infra 外联、HN 与 Reddit r/LocalLLaMA、Upwork 的 LLM infra 类目。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>卖的是「一份能拿给投资人看的降本报告」：现状 GPU 推理成本基线 → 模型与框架适配度评估 → TPU 迁移后的成本与延迟测算 → 单模型 POC 验证。AI 公司现在最痛的是毛利被推理成本吃掉，一份几千美元的评估报告若能证明省 30% 以上，付费决策极快。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>评估+POC 是小团队活：1 个懂推理栈的人 + 1 个跑 benchmark 的人，两周能出一版；不卖硬件也不需要云厂商代理资质，TorchTPU 与 vLLM/SGLang 都是公开可用的开源栈。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：主要成本是 TPU 试用配额与云上 GPU 对照跑（估算几百至一两千美元/项目），人力为主；前期投入是做一份公开的 benchmark 复现文章当获客素材。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>第一，TPU 配额不是想拿就有，GCP 新账号常被拒或排队，别在合同里承诺交付时间却不锁配额，先确认客户自己有没有 TPU 配额；第二，TorchTPU 是刚发布的栈，算子覆盖不全，自定义算子或特殊 attention 实现极可能跑不起来，POC 一定选客户最标准的那个模型，别一上来做全家桶；第三，这是重度云厂商绑定，迁过去再迁回来成本更高，报告里必须写明 lock-in 风险，否则客户半年后回头骂你；第四，Google 自己的团队和一堆云咨询公司都在做这事，别打「全栈迁移」正面战，只切「两周评估报告」。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：用 TorchTPU 上的 vLLM 复现一个开源模型的推理 benchmark（含 GPU 对照与每百万 token 成本），写成双语技术文章发 HN 与 LinkedIn，挂「免费 30 分钟迁移评估」入口。</p></div>
+            </div>
+            <a class="opp-link" href="https://pytorch.org/blog/introducing-torchtpu/" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('show', window.scrollY>520);
+  });
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.openOpp=function(i){document.getElementById('opp-modal-'+i).classList.add('show')};
+  window.closeOpp=function(i){document.getElementById('opp-modal-'+i).classList.remove('show')};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(function(m){m.classList.remove('show')})}
+  });
+})();
+</script>
+</body>
+</html>
