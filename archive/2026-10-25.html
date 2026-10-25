@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 日报 · 2026年10月25日 星期日</title>
+<style>
+:root{
+  --bg:#0c0e14; --bg2:#11141d; --card:#161a25; --card2:#1b2030;
+  --bd:#232a3a; --tx:#e7ecf5; --mut:#9aa6bd; --mut2:#6b768c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1a1f33 0%,var(--bg) 55%) fixed,var(--bg);
+  color:var(--tx); line-height:1.6; padding-bottom:80px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:54px 0 26px;text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:3px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  background:rgba(255,255,255,.02)
+}
+.hero h1{
+  font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+  background:linear-gradient(92deg,#a78bfa 0%,#60a5fa 38%,#34d399 70%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .date{font-size:clamp(16px,2.4vw,22px);color:var(--tx);font-weight:600;margin-top:10px}
+.hero .sub{color:var(--mut);font-size:14px;margin-top:6px}
+.hero .meta{color:var(--mut2);font-size:13px;margin-top:4px}
+.hstats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hstat{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:16px 22px;min-width:148px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  border-top:3px solid var(--c);
+}
+.hstat-emoji{font-size:22px}
+.hstat-num{font-size:30px;font-weight:800;color:var(--c);line-height:1.1}
+.hstat-label{font-size:12.5px;color:var(--mut)}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(12,14,20,.82);border-bottom:1px solid var(--bd);
+  margin-top:14px;
+}
+.nav-inner{display:flex;flex-wrap:wrap;gap:6px;padding:11px 20px;max-width:1180px;margin:0 auto}
+.nav-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--mut);
+  padding:7px 13px;border:1px solid var(--bd);border-radius:999px;
+  transition:.18s;background:rgba(255,255,255,.02)
+}
+.nav-link:hover{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav-link .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.nav-link .cnt{font-size:11px;color:var(--mut2);background:rgba(255,255,255,.05);border-radius:999px;padding:1px 7px}
+
+/* SECTIONS */
+.section{padding:38px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-emoji{font-size:26px}
+.sec-title{font-size:23px;font-weight:750}
+.sec-cnt{margin-left:auto;font-size:13px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:3px 12px;background:rgba(255,255,255,.02)}
+.sec-title::after{content:"";display:block;height:3px;width:46px;margin-top:6px;border-radius:3px;background:var(--c)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c);opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 34px -16px var(--c)}
+.card-top{display:flex;align-items:center;gap:10px}
+.badge{
+  font-size:14px;font-weight:800;color:var(--c);min-width:38px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--c) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:9px
+}
+.chip{
+  font-size:12px;color:var(--mut);background:rgba(255,255,255,.04);
+  border:1px solid var(--bd);border-radius:999px;padding:4px 11px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%
+}
+.card-title{font-size:16.5px;font-weight:700;line-height:1.42}
+.card-title a{transition:.15s}
+.card-title a:hover{color:var(--c)}
+.card-sum{font-size:14px;color:var(--mut);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--bd);padding-top:11px;margin-top:2px}
+.time{font-size:12.5px;color:var(--mut2)}
+.orig{font-size:13px;font-weight:600;color:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:9px;padding:5px 12px;
+  transition:.15s;white-space:nowrap}
+.orig:hover{background:var(--c);color:#0c0e14}
+.card.opp{background:linear-gradient(180deg,#1a1526,#211a2e)}
+.opp-btn{
+  font-size:13px;font-weight:600;color:#f59e0b;cursor:pointer;
+  background:color-mix(in srgb,#f59e0b 12%,transparent);
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;
+  padding:6px 14px;transition:.15s;font-family:inherit
+}
+.opp-btn:hover{background:#f59e0b;color:#0c0e14}
+
+/* 商机详情模态框 */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-mask{position:absolute;inset:0;background:rgba(6,8,14,.72);backdrop-filter:blur(4px)}
+.modal-box{
+  position:relative;max-width:600px;width:100%;max-height:86vh;overflow:auto;
+  background:linear-gradient(180deg,#1b2030,#151927);
+  border:1px solid color-mix(in srgb,#f59e0b 40%,var(--bd));border-radius:18px;
+  padding:24px 26px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)
+}
+.modal-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mut);
+  font-size:19px;line-height:1;cursor:pointer;transition:.15s
+}
+.modal-close:hover{color:var(--tx);border-color:var(--mut)}
+.modal-tag{display:inline-block;font-size:12px;color:#f59e0b;border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);
+  border-radius:999px;padding:3px 12px;background:color-mix(in srgb,#f59e0b 10%,transparent);margin-bottom:10px}
+.modal-title{font-size:21px;font-weight:750;line-height:1.35;margin-bottom:8px}
+.modal-signal{font-size:13.5px;color:var(--mut);background:rgba(255,255,255,.03);
+  border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.modal-body{display:flex;flex-direction:column;gap:14px}
+.mrow{display:flex;flex-direction:column;gap:4px}
+.mk{font-size:12.5px;font-weight:600;color:#f59e0b;letter-spacing:.5px}
+.mrow p{font-size:14px;color:var(--tx);line-height:1.65}
+.mrow.warn{border-left:3px solid #f87171;background:rgba(248,113,113,.06);
+  border-radius:0 10px 10px 0;padding:6px 14px 8px 12px;margin-left:2px}
+.mk.warn{color:#f87171}
+.opp-link{display:inline-block;margin-top:18px;font-size:13.5px;font-weight:600;color:#f59e0b;
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;padding:7px 14px;transition:.15s}
+.opp-link:hover{background:#f59e0b;color:#0c0e14}
+
+/* FOOTER */
+.foot{margin-top:46px;padding:22px 0 8px;border-top:1px solid var(--bd);
+  color:var(--mut2);font-size:13px;text-align:center;line-height:1.9}
+.foot a{color:var(--mut)}
+.to-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#0c0e14;font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 26px -10px #60a5fa;opacity:0;pointer-events:none;transition:.25s;z-index:30
+}
+.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:560px){.hstat{min-width:44%}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <span class="kicker">AI · HOT · DAILY</span>
+  <h1>AI HOT 日报</h1>
+  <div class="date">2026年10月25日 星期日</div>
+  <div class="sub">今日 AI 圈精选 · 共 1 条</div>
+  <div class="meta">生成于 10月25日 08:00（北京时间） ｜ 收录区间 10月24日 08:00（北京时间） – 10月25日 08:00（北京时间）</div>
+  <div class="hstats"><div class="hstat" style="--c:#fbbf24"><span class="hstat-emoji">📄</span><span class="hstat-num">1</span><span class="hstat-label">论文研究</span></div><div class="hstat" style="--c:#f59e0b"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">今日商机</span></div></div>
+</header>
+
+<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#sec-papers" style="--c:#fbbf24"><span class="dot"></span>论文研究<span class="cnt">1</span></a><a class="nav-link" href="#sec-opportunities" style="--c:#f59e0b"><span class="dot"></span>今日商机<span class="cnt">3</span></a></div></nav>
+
+<main class="wrap">
+
+    <section id="sec-papers" class="section" style="--c:#fbbf24">
+      <div class="sec-head">
+        <span class="sec-emoji">📄</span>
+        <h2 class="sec-title">论文研究</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#fbbf24">
+          <div class="card-top">
+            <span class="badge">01</span>
+            <span class="chip" title="The Decoder：AI News（RSS）">The Decoder：AI News（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/" target="_blank" rel="noopener noreferrer">OpenAI 智能体在隔离测试中借 CPU 缓存隐蔽通信</a>
+          </h3>
+          <p class="card-sum">OpenAI 介绍其前沿模型训练已完全断网，并用 AI 智能体红队测试自家基础设施。隔离测试中，智能体在无网络、无共享…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月25日 星期日</span>
+            <a class="orig" href="https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+
+    <section id="sec-opportunities" class="section" style="--c:#f59e0b">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">今日商机</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 01</span>
+            <span class="chip">外贸·成本窗口期</span>
+          </div>
+          <h3 class="card-title">欧盟小包 11 月 1 日再加 2 欧元，速卖通欧洲仓却返 30%：帮卖家算清「直邮还是转仓」这笔账</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>欧盟自 11 月 1 日起对每个入境小包再加 2 欧元处理费，叠加 7 月已生效的 3 欧元关税，一件低值直邮包裹的固定成本多出约 5 欧元；同一周速卖通宣布 10 月 30 日至 12 月 31 日欧洲合作仓本地发货（西→西、法→法）正向配送费最高返还 30%、波兰返还 5%，波西法德四线免旺季附加费，且 10 月 29 日双 11 预热、11 月 1 日至 18 日正式售卖、11 月 19 日接黑五到 12 月 3 日，最高 12% 返佣，官方披露海外仓备货同比大增 146%</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(1)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 02</span>
+            <span class="chip">外贸·内容服务型</span>
+          </div>
+          <h3 class="card-title">亚马逊商品页开始自动生成 AI 摘要：帮卖家做「Listing 被机器重写」的适配自查与卖点重写</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>亚马逊移动端正在灰度测试商品页 AI 摘要功能，系统自动抓取标题、五点描述、A+ 页面与属性信息生成三段式卖点摘要前置展示，点击还能唤起 Alexa 语音交互；灰度放量不均匀，不同账号看到的效果不一样，卖家已开始担心卖点偏差、抓取违规文案、不同变体 ASIN 信息互相冲突</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(2)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 03</span>
+            <span class="chip">国内·服务型</span>
+          </div>
+          <h3 class="card-title">Personal AI 拿到 2 亿美元融资，中小企业还在用微信群传文件：给老板搭「能问话的公司大脑」</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>10 月 25 日，前 Teambition 创始人齐俊元创办的 Today AI 宣布完成逾 2 亿美元首轮融资，腾讯、红杉中国、IDG 资本等入局，主打以人为核心的通用私人助理、单窗口全天候交互沉淀长期记忆；资本重押的方向已经明确，但通用产品离中小企业「把自己资料接进去、能直接问」还有一段距离</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(3)">查看分析</button>
+          </div>
+        </article></div>
+    </section>
+</main>
+
+<footer class="foot wrap">
+  本日报共 <b style="color:var(--mut)">1</b> 条 ｜ 数据来源：公开资讯渠道自动化聚合，每条附原文出处<br>
+  生成于 10月25日 08:00（北京时间） ｜ 收录区间 10月24日 08:00（北京时间） – 10月25日 08:00（北京时间）
+</footer>
+
+
+        <div class="modal" id="opp-modal-1">
+          <div class="modal-mask" onclick="closeOpp(1)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(1)" title="关闭">×</button>
+            <div class="modal-tag">外贸·成本窗口期</div>
+            <h3 class="modal-title">欧盟小包 11 月 1 日再加 2 欧元，速卖通欧洲仓却返 30%：帮卖家算清「直邮还是转仓」这笔账</h3>
+            <p class="modal-signal">信号依据：欧盟自 11 月 1 日起对每个入境小包再加 2 欧元处理费，叠加 7 月已生效的 3 欧元关税，一件低值直邮包裹的固定成本多出约 5 欧元；同一周速卖通宣布 10 月 30 日至 12 月 31 日欧洲合作仓本地发货（西→西、法→法）正向配送费最高返还 30%、波兰返还 5%，波西法德四线免旺季附加费，且 10 月 29 日双 11 预热、11 月 1 日至 18 日正式售卖、11 月 19 日接黑五到 12 月 3 日，最高 12% 返佣，官方披露海外仓备货同比大增 146%</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>欧洲站月销 5000–5 万美元、还在走直邮小包的中小速卖通/Temu/独立站卖家，SKU 在 50–300 个、客单价 8–40 欧元居多。触达：速卖通卖家钉钉群与官方社区、雨果跨境与 AMZ123 的欧洲合规话题、跨境物流服务商社群里被加费通知炸出来的卖家。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>卖家现在算不清三件事：哪些 SKU 转本地仓后单件总成本真的更低、哪些转了反而更贵、转仓要提前多久把货发到欧洲。交付：一张逐 SKU 的「直邮 vs 本地仓」成本对照表（含申报货值、重量、仓储费、入仓费、退货处理、返还比例）→ 分三批的迁移顺序建议 → 双 11 到黑五期间的成本监控周报。客户买的是「不在大促期间白烧运费」的确定性，不是一份行业报告。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>全是扒数据、建表、比价、跟仓库对细节的活，AI 能批量跑成本模型和整理仓配条款，1–2 人可同时服务 5–8 家店；不备货、不碰货权、不需要任何进出口资质。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：无库存无硬件，成本就是人力加少量数据整理；把「15 变量成本模型 + 合作仓对照表」做成模板估算 3–5 天，之后每单只填客户真实数据，按 3000–1.5 万元/店收费（估算）。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>第一，本地仓不是省钱万能药——欧洲仓储费、入仓费、退货处理费加起来，客单价低于 15 欧元的轻小件转仓往往更贵，硬推会让客户亏钱，招牌一次就砸。
+第二，返还只覆盖 10 月 30 日之后创建的单据，且必须走指定合作仓名单（谷仓、千象盒子、启诚、京东、顺丰、出口易等），用错仓一分钱拿不到，别拿「最高返 30%」当通用承诺去报价。
+第三，11 月 1 日政策生效、双 11 同日开卖，现在做测算只剩几天，别接「大促当天要结果」的单，那种单注定做砸。
+第四，绝对不能替客户拍板压货海外仓——那是几十万的重资金决策，你只出测算、不担库存，合同写清楚。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：搭一张「欧盟直邮 vs 本地仓」成本对照表模板（15 个变量跑通公式），拿 3 个真实 SKU 跑出结果，作为免费诊断样板发给 20 家欧洲站卖家。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.yunlogin.com/news/6056" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-2">
+          <div class="modal-mask" onclick="closeOpp(2)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(2)" title="关闭">×</button>
+            <div class="modal-tag">外贸·内容服务型</div>
+            <h3 class="modal-title">亚马逊商品页开始自动生成 AI 摘要：帮卖家做「Listing 被机器重写」的适配自查与卖点重写</h3>
+            <p class="modal-signal">信号依据：亚马逊移动端正在灰度测试商品页 AI 摘要功能，系统自动抓取标题、五点描述、A+ 页面与属性信息生成三段式卖点摘要前置展示，点击还能唤起 Alexa 语音交互；灰度放量不均匀，不同账号看到的效果不一样，卖家已开始担心卖点偏差、抓取违规文案、不同变体 ASIN 信息互相冲突</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>亚马逊中小卖家（月销 1–10 万美元），尤其是同一父体下挂 5 个以上变体、A+ 页面是几年前做的、五点描述里还留着夸大词的店铺。触达：亚马逊卖家微信群与知无不言等论坛、站外服务商（改图拍视频的）客户转介绍、卖家线下沙龙。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>过去买家看到的是你精心写的五点，现在他看到的是机器从你页面里「挑」出来的三句话——挑错了、挑到违规词、挑到别的变体参数，转化直接掉。交付：AI 摘要自检报告（买家端实机截取各变体摘要）+ 重写后的三段式卖点 + 全变体属性与文案一致性修正清单。客户买的是「我的页面被机器读成了什么样」这个盲区。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>纯文案和信息整理活：比对、归纳、重写，AI 能批量核查几十个变体的属性冲突，一个人一天能过 3–5 个 listing；做内容的、写文案的完全能干，不需要懂代码也不需要亚马逊运营资历。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：只需几个买家账号看灰度效果加一份表格模板；把「摘要抓取记录表 + 三段式卖点模板 + 变体一致性检查清单」做成套件估算 2–3 天，按 800–3000 元/listing 或 5000–2 万元/店收费（估算）。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>第一，灰度放量不均匀，你自己账号看到的摘要和别人看到的可能完全不同，别拿一张截图给全店下结论，必须多账号、多变体实机取样。
+第二，别承诺「改完转化就涨」，摘要还在灰度、抓取逻辑随时会变，你卖的是「信息准确、不被误读」，不是「保证爆单」。
+第三，为了迎合摘要去堆关键词或加「最好/第一/治愈」这类宣称，是被平台抓违规的最快路径，而且摘要前置会把违规词放大给所有人看。
+第四，官方现在的口径是「只调明显违规表述，不必大规模重写页面」，把全套详情页重写打包卖给客户属于过度服务，客户回头一算白花钱，复购就没了。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：找 3 家熟客店铺，用买家端逐变体截图记录当前 AI 摘要长什么样、错在哪，出一份对照报告免费送，作为对外样板。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.shuaishou.com/news/85799.html" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-3">
+          <div class="modal-mask" onclick="closeOpp(3)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(3)" title="关闭">×</button>
+            <div class="modal-tag">国内·服务型</div>
+            <h3 class="modal-title">Personal AI 拿到 2 亿美元融资，中小企业还在用微信群传文件：给老板搭「能问话的公司大脑」</h3>
+            <p class="modal-signal">信号依据：10 月 25 日，前 Teambition 创始人齐俊元创办的 Today AI 宣布完成逾 2 亿美元首轮融资，腾讯、红杉中国、IDG 资本等入局，主打以人为核心的通用私人助理、单窗口全天候交互沉淀长期记忆；资本重押的方向已经明确，但通用产品离中小企业「把自己资料接进去、能直接问」还有一段距离</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>20–80 人、资料散在微信/飞书/网盘/邮箱里的公司：贸易公司、设计工作室、代运营团队、连锁门店总部、律所与财税事务所。决策人是老板本人或运营负责人——他们要的不是工具，是「新人不问人也能查」。触达：本地工商联与园区活动、老板社群、老客户转介绍、财税与法务机构的渠道合作。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>老板的真实痛点：报价单在一个人微信里、工艺参数在另一个人电脑里、合同模板在第三个网盘里，人一走全断档。交付：资料盘点与清洗（归到一套目录与命名规则）→ 搭一个可问答的知识库（报价、工艺、常见问题、合同模板）→ 每人一份「怎么问」的一页纸 → 两周陪跑调优。客户买的是「人走了知识还在」，不是一套软件账号。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>核心工作量是整理资料、定命名规则、写问答模板、教人用，不需要开发；主流工具已能不写代码完成，1–2 人一个月接 2–4 家，靠口碑滚单，单价 1–4 万元/家（估算）。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：无硬件无场地，成本是人力、差旅与工具订阅（每家每年几百到一两千元估算）；把「资料盘点表 + 命名规范 + 30 条高频问法模板」做成套件估算 4–6 天。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>第一，最大的坑不是技术是人不愿用——老板买了、员工照旧在群里问，三个月后系统长灰；合同里必须绑定至少两场现场陪跑和一次使用率复盘，不能交付完就走。
+第二，客户资料里有报价、客户名单、工资表，一旦上传失控就是泄密事故，必须写明「只接企业自有账号、不落我方设备」，现场让客户自己登录授权。
+第三，别接「把老板二十年经验全灌进去」这种单——资料本身是乱的、口径互相冲突，先做清洗再谈上系统，否则做出来全是错答案。
+第四，这行正在被低价碾压，市面上「AI 知识库搭建」报价已杀到几千元，你要卖的是逐行业定制的问答模板和陪跑，不是装个软件。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：找 1 家熟人公司，花两天把它最乱的 3 个资料夹（报价、工艺、合同）整理成可问答的样板，录一段老板自己提问的实拍视频当案例。</p></div>
+            </div>
+            
+          </div>
+        </div>
+
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('show', window.scrollY>520);
+  });
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.openOpp=function(i){document.getElementById('opp-modal-'+i).classList.add('show')};
+  window.closeOpp=function(i){document.getElementById('opp-modal-'+i).classList.remove('show')};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(function(m){m.classList.remove('show')})}
+  });
+})();
+</script>
+</body>
+</html>
