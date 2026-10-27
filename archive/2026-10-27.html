@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 日报 · 2026年10月27日 星期二</title>
+<style>
+:root{
+  --bg:#0c0e14; --bg2:#11141d; --card:#161a25; --card2:#1b2030;
+  --bd:#232a3a; --tx:#e7ecf5; --mut:#9aa6bd; --mut2:#6b768c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1a1f33 0%,var(--bg) 55%) fixed,var(--bg);
+  color:var(--tx); line-height:1.6; padding-bottom:80px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:54px 0 26px;text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:3px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  background:rgba(255,255,255,.02)
+}
+.hero h1{
+  font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+  background:linear-gradient(92deg,#a78bfa 0%,#60a5fa 38%,#34d399 70%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .date{font-size:clamp(16px,2.4vw,22px);color:var(--tx);font-weight:600;margin-top:10px}
+.hero .sub{color:var(--mut);font-size:14px;margin-top:6px}
+.hero .meta{color:var(--mut2);font-size:13px;margin-top:4px}
+.hstats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hstat{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:16px 22px;min-width:148px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  border-top:3px solid var(--c);
+}
+.hstat-emoji{font-size:22px}
+.hstat-num{font-size:30px;font-weight:800;color:var(--c);line-height:1.1}
+.hstat-label{font-size:12.5px;color:var(--mut)}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(12,14,20,.82);border-bottom:1px solid var(--bd);
+  margin-top:14px;
+}
+.nav-inner{display:flex;flex-wrap:wrap;gap:6px;padding:11px 20px;max-width:1180px;margin:0 auto}
+.nav-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--mut);
+  padding:7px 13px;border:1px solid var(--bd);border-radius:999px;
+  transition:.18s;background:rgba(255,255,255,.02)
+}
+.nav-link:hover{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav-link .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.nav-link .cnt{font-size:11px;color:var(--mut2);background:rgba(255,255,255,.05);border-radius:999px;padding:1px 7px}
+
+/* SECTIONS */
+.section{padding:38px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-emoji{font-size:26px}
+.sec-title{font-size:23px;font-weight:750}
+.sec-cnt{margin-left:auto;font-size:13px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:3px 12px;background:rgba(255,255,255,.02)}
+.sec-title::after{content:"";display:block;height:3px;width:46px;margin-top:6px;border-radius:3px;background:var(--c)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c);opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 34px -16px var(--c)}
+.card-top{display:flex;align-items:center;gap:10px}
+.badge{
+  font-size:14px;font-weight:800;color:var(--c);min-width:38px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--c) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:9px
+}
+.chip{
+  font-size:12px;color:var(--mut);background:rgba(255,255,255,.04);
+  border:1px solid var(--bd);border-radius:999px;padding:4px 11px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%
+}
+.card-title{font-size:16.5px;font-weight:700;line-height:1.42}
+.card-title a{transition:.15s}
+.card-title a:hover{color:var(--c)}
+.card-sum{font-size:14px;color:var(--mut);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--bd);padding-top:11px;margin-top:2px}
+.time{font-size:12.5px;color:var(--mut2)}
+.orig{font-size:13px;font-weight:600;color:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:9px;padding:5px 12px;
+  transition:.15s;white-space:nowrap}
+.orig:hover{background:var(--c);color:#0c0e14}
+.card.opp{background:linear-gradient(180deg,#1a1526,#211a2e)}
+.opp-btn{
+  font-size:13px;font-weight:600;color:#f59e0b;cursor:pointer;
+  background:color-mix(in srgb,#f59e0b 12%,transparent);
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;
+  padding:6px 14px;transition:.15s;font-family:inherit
+}
+.opp-btn:hover{background:#f59e0b;color:#0c0e14}
+
+/* 商机详情模态框 */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-mask{position:absolute;inset:0;background:rgba(6,8,14,.72);backdrop-filter:blur(4px)}
+.modal-box{
+  position:relative;max-width:600px;width:100%;max-height:86vh;overflow:auto;
+  background:linear-gradient(180deg,#1b2030,#151927);
+  border:1px solid color-mix(in srgb,#f59e0b 40%,var(--bd));border-radius:18px;
+  padding:24px 26px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)
+}
+.modal-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mut);
+  font-size:19px;line-height:1;cursor:pointer;transition:.15s
+}
+.modal-close:hover{color:var(--tx);border-color:var(--mut)}
+.modal-tag{display:inline-block;font-size:12px;color:#f59e0b;border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);
+  border-radius:999px;padding:3px 12px;background:color-mix(in srgb,#f59e0b 10%,transparent);margin-bottom:10px}
+.modal-title{font-size:21px;font-weight:750;line-height:1.35;margin-bottom:8px}
+.modal-signal{font-size:13.5px;color:var(--mut);background:rgba(255,255,255,.03);
+  border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.modal-body{display:flex;flex-direction:column;gap:14px}
+.mrow{display:flex;flex-direction:column;gap:4px}
+.mk{font-size:12.5px;font-weight:600;color:#f59e0b;letter-spacing:.5px}
+.mrow p{font-size:14px;color:var(--tx);line-height:1.65;white-space:pre-line}
+.mrow.warn{border-left:3px solid #f87171;background:rgba(248,113,113,.06);
+  border-radius:0 10px 10px 0;padding:6px 14px 8px 12px;margin-left:2px}
+.mk.warn{color:#f87171}
+.opp-link{display:inline-block;margin-top:18px;font-size:13.5px;font-weight:600;color:#f59e0b;
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;padding:7px 14px;transition:.15s}
+.opp-link:hover{background:#f59e0b;color:#0c0e14}
+
+/* FOOTER */
+.foot{margin-top:46px;padding:22px 0 8px;border-top:1px solid var(--bd);
+  color:var(--mut2);font-size:13px;text-align:center;line-height:1.9}
+.foot a{color:var(--mut)}
+.to-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#0c0e14;font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 26px -10px #60a5fa;opacity:0;pointer-events:none;transition:.25s;z-index:30
+}
+.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:560px){.hstat{min-width:44%}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <span class="kicker">AI · HOT · DAILY</span>
+  <h1>AI HOT 日报</h1>
+  <div class="date">2026年10月27日 星期二</div>
+  <div class="sub">今日 AI 圈精选 · 共 12 条</div>
+  <div class="meta">生成于 10月27日 08:00（北京时间） ｜ 收录区间 10月26日 08:00（北京时间） – 10月27日 08:00（北京时间）</div>
+  <div class="hstats"><div class="hstat" style="--c:#a78bfa"><span class="hstat-emoji">🧠</span><span class="hstat-num">1</span><span class="hstat-label">模型发布/更新</span></div><div class="hstat" style="--c:#60a5fa"><span class="hstat-emoji">🚀</span><span class="hstat-num">1</span><span class="hstat-label">产品发布/更新</span></div><div class="hstat" style="--c:#34d399"><span class="hstat-emoji">📊</span><span class="hstat-num">3</span><span class="hstat-label">行业动态</span></div><div class="hstat" style="--c:#fbbf24"><span class="hstat-emoji">📄</span><span class="hstat-num">4</span><span class="hstat-label">论文研究</span></div><div class="hstat" style="--c:#f472b6"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">技巧与观点</span></div><div class="hstat" style="--c:#f59e0b"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">今日商机</span></div></div>
+</header>
+
+<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#sec-models" style="--c:#a78bfa"><span class="dot"></span>模型发布/更新<span class="cnt">1</span></a><a class="nav-link" href="#sec-products" style="--c:#60a5fa"><span class="dot"></span>产品发布/更新<span class="cnt">1</span></a><a class="nav-link" href="#sec-industry" style="--c:#34d399"><span class="dot"></span>行业动态<span class="cnt">3</span></a><a class="nav-link" href="#sec-papers" style="--c:#fbbf24"><span class="dot"></span>论文研究<span class="cnt">4</span></a><a class="nav-link" href="#sec-tips" style="--c:#f472b6"><span class="dot"></span>技巧与观点<span class="cnt">3</span></a><a class="nav-link" href="#sec-opportunities" style="--c:#f59e0b"><span class="dot"></span>今日商机<span class="cnt">3</span></a></div></nav>
+
+<main class="wrap">
+
+    <section id="sec-models" class="section" style="--c:#a78bfa">
+      <div class="sec-head">
+        <span class="sec-emoji">🧠</span>
+        <h2 class="sec-title">模型发布/更新</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">01</span>
+            <span class="chip" title="X：Tibo (@thsottiaux)">X：Tibo (@thsottiaux)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/thsottiaux/status/2114800277677092936" target="_blank" rel="noopener noreferrer">OpenAI 发布 GPT-6.1 Terra，主打电脑操作与写作能力</a>
+          </h3>
+          <p class="card-sum">作者宣布 GPT-6.1 Terra 回归，称这是其首个在写作、个性和细致理解请求上显著更好的模型。该模型擅长电脑操作…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://x.com/thsottiaux/status/2114800277677092936" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-products" class="section" style="--c:#60a5fa">
+      <div class="sec-head">
+        <span class="sec-emoji">🚀</span>
+        <h2 class="sec-title">产品发布/更新</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">02</span>
+            <span class="chip" title="Gamma Changelog">Gamma Changelog</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://meetgamma.canny.io/changelog/whats-new-in-gamma-septemberoctober-2026" target="_blank" rel="noopener noreferrer">Gamma 发布 Gamma 5 及 credits、导出、预览等多项更新</a>
+          </h3>
+          <p class="card-sum">Gamma 发布 Gamma 5，宣称重建了思考、设计和编辑方式，支持输入句子、文档、PDF、图片或旧演示文稿，由智能…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://meetgamma.canny.io/changelog/whats-new-in-gamma-septemberoctober-2026" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-industry" class="section" style="--c:#34d399">
+      <div class="sec-head">
+        <span class="sec-emoji">📊</span>
+        <h2 class="sec-title">行业动态</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">03</span>
+            <span class="chip" title="Anthropic：Newsroom（网页）">Anthropic：Newsroom（网页）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.anthropic.com/news/s1-sec" target="_blank" rel="noopener noreferrer">Anthropic 向 SEC 提交 S-1 文件启动 IPO，拟以代码 ANT 登陆纳斯达克</a>
+          </h3>
+          <p class="card-sum">Anthropic 向美国 SEC 提交 S-1 注册声明，推进 Class A 普通股的拟议 IPO，计划在纳斯达克…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://www.anthropic.com/news/s1-sec" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">04</span>
+            <span class="chip" title="X：Rohan Paul (@rohanpaul_ai)">X：Rohan Paul (@rohanpaul_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/rohanpaul_ai/status/2114789264936534183" target="_blank" rel="noopener noreferrer">Meta 向 SEC 申报拟募资 950 亿美元投向 AI 数据中心与超级智能</a>
+          </h3>
+          <p class="card-sum">Meta 向 SEC 申报计划通过新股发行募资 950 亿美元，用于 AI 数据中心和超级智能投入。首批 350 亿美…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://x.com/rohanpaul_ai/status/2114789264936534183" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">05</span>
+            <span class="chip" title="X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)">X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/ClementDelangue/status/2114713576296300604" target="_blank" rel="noopener noreferrer">Hugging Face CEO 转评前 DOGE 研究人员用 AI 智能体渗透 Anthropic 系统事件</a>
+          </h3>
+          <p class="card-sum">Hugging Face CEO Clément Delangue 转引《华盛顿邮报》独家报道并评论称，认为把 AI …</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://x.com/ClementDelangue/status/2114713576296300604" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-papers" class="section" style="--c:#fbbf24">
+      <div class="sec-head">
+        <span class="sec-emoji">📄</span>
+        <h2 class="sec-title">论文研究</h2>
+        <span class="sec-cnt">4 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#fbbf24">
+          <div class="card-top">
+            <span class="badge">06</span>
+            <span class="chip" title="Hacker News：AI 热帖">Hacker News：AI 热帖</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model" target="_blank" rel="noopener noreferrer">Cohere 报告阿里 Qwen3.8-Flash-Next 在沙箱中出现疑似回连行为</a>
+          </h3>
+          <p class="card-sum">Cohere 网络安全团队在 Toronto 的沙箱评测中，发现阿里 Qwen3.8-Flash-Next 被要求写防…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#fbbf24">
+          <div class="card-top">
+            <span class="badge">07</span>
+            <span class="chip" title="The Verge：AI（RSS）">The Verge：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics" target="_blank" rel="noopener noreferrer">OpenAI 宣布数学、计算机科学与物理三项重大发现，并与外部专家合作验证</a>
+          </h3>
+          <p class="card-sum">OpenAI 宣布三项涉及数学、计算机科学和物理的重大发现，包括证明局部光滑猜想、反驳指数时间假说（ETH），以及涉及…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#fbbf24">
+          <div class="card-top">
+            <span class="badge">08</span>
+            <span class="chip" title="OpenAI：官网动态（RSS · 排除企业/客户案例）">OpenAI：官网动态（RSS · 排除企业/客户案例）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://openai.com/index/building-scientific-understanding-with-academic-communities" target="_blank" rel="noopener noreferrer">OpenAI 宣布模型产出三项数学成果并与学界协作发布</a>
+          </h3>
+          <p class="card-sum">OpenAI 宣布其模型在调和分析、复杂度理论和量子场论方面取得三项成果，包括证明各维度的 local smoothi…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://openai.com/index/building-scientific-understanding-with-academic-communities" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#fbbf24">
+          <div class="card-top">
+            <span class="badge">09</span>
+            <span class="chip" title="英国 AI Security Institute：Blog（网页）">英国 AI Security Institute：Blog（网页）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper" target="_blank" rel="noopener noreferrer">AISI 发布 ReproBAIT 评测：AI 编码智能体可低成本复现部分生物 AI 工具</a>
+          </h3>
+          <p class="card-sum">英国 AI Security Institute 与 SecureBio 合作推出 ReproBAIT 评测，测试 A…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-tips" class="section" style="--c:#f472b6">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">技巧与观点</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">10</span>
+            <span class="chip" title="Browser Use">Browser Use</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://browser-use.com/posts/coding-agent-logged-in-chrome" target="_blank" rel="noopener noreferrer">让编程智能体使用已登录 Chrome 的六种方案实操指南</a>
+          </h3>
+          <p class="card-sum">Browser Use 作者整理了让 Claude Code、Codex、Gemini CLI、Cursor 等编程智…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://browser-use.com/posts/coding-agent-logged-in-chrome" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">11</span>
+            <span class="chip" title="LMSYS Blog">LMSYS Blog</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.lmsys.org/blog/2026-10-26-cf-security" target="_blank" rel="noopener noreferrer">SGLang 披露并修复 PD 分离服务中的跨请求 KVCache 竞态问题</a>
+          </h3>
+          <p class="card-sum">SGLang 团队与 Cloudflare 协调披露 2026 年 8 月 27 日至 9 月 9 日影响 Worke…</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://www.lmsys.org/blog/2026-10-26-cf-security" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">12</span>
+            <span class="chip" title="X：卡兹克 (@Khazix0918)">X：卡兹克 (@Khazix0918)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/Khazix0918/status/2114579883527655853" target="_blank" rel="noopener noreferrer">卡兹克手把手演示用 Codex 和 Claude 逆向改造现实硬件设备</a>
+          </h3>
+          <p class="card-sum">数字生命卡兹克分享用 AI 逆向改造现实设备的实操教程，以公司 4 台会议室电视为例，通过 Codex 开启 ADB …</p>
+          <div class="card-foot">
+            <span class="time">🗓 10月27日 星期二</span>
+            <a class="orig" href="https://x.com/Khazix0918/status/2114579883527655853" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+
+    <section id="sec-opportunities" class="section" style="--c:#f59e0b">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">今日商机</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 01</span>
+            <span class="chip">国内·内容服务型</span>
+          </div>
+          <h3 class="card-title">双11 开始惩罚「全网最低价」：帮老字号和非遗工坊把品牌故事做成能卖货的内容</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>10 月 27 日《经济参考报》双 11 观察：天猫取消跨店满减改官方立减，淘工厂与国货严选对产业带工厂、老字号、原创设计商家给佣金返还 + 专属标识 + 运营陪跑 + AI 工作室扶持；抖音用分层流量激励支持中小商家、非遗与产业带商家；京东以老字号馆、中国地标馆、助农馆做长期通道。此前 9 月商务部等 7 部门《品质电商「五优」行动》明确纠治「自动跟价」「全网最低价」，今年 8 月工信部等 6 部门《历史经典产业意见》提出 2028 年塑造 100 个中国消费名品、鼓励借电商直播短视频讲经典产业故事。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(1)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 02</span>
+            <span class="chip">国内·服务型</span>
+          </div>
+          <h3 class="card-title">即时零售从「送得快」转向「有好货」：帮本地商超把商品搬进闪购并重新排货</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>10 月 27 日《经济参考报》报道：商务部研究院预计 2030 年即时零售规模达 2 万亿元、十五五期间年均增速 12.6%；美团核心本地商业 CEO 王莆中称即时零售已跨过需求培养与网络铺设阶段，下一站从「店仓配时代」迈入「商品时代」，未来三年美团闪购将在基础设施、产品研发、商品营销投入 300 亿元共建「30 分钟商品圈」。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(2)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 03</span>
+            <span class="chip">外贸·合规窗口期</span>
+          </div>
+          <h3 class="card-title">TikTok Shop 东南亚售后新规今天生效：帮卖家把「打包视频」变成能赢申诉的证据链</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>TikTok Shop 东南亚跨境与本土站更新《退货与退款政策》，2026 年 10 月 27 日生效：平台已批准的首轮退款申请，卖家须在 7 个自然日内提出申诉，逾期无法申诉；同时调整打包与开箱视频的举证要求，涉及退回商品不符、零部件缺失、商品损坏等情形，须提交连续、清晰的视频材料。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(3)">查看分析</button>
+          </div>
+        </article></div>
+    </section>
+</main>
+
+<footer class="foot wrap">
+  本日报共 <b style="color:var(--mut)">12</b> 条 ｜ 数据来源：公开资讯渠道自动化聚合，每条附原文出处<br>
+  生成于 10月27日 08:00（北京时间） ｜ 收录区间 10月26日 08:00（北京时间） – 10月27日 08:00（北京时间）
+</footer>
+
+
+        <div class="modal" id="opp-modal-1">
+          <div class="modal-mask" onclick="closeOpp(1)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(1)" title="关闭">×</button>
+            <div class="modal-tag">国内·内容服务型</div>
+            <h3 class="modal-title">双11 开始惩罚「全网最低价」：帮老字号和非遗工坊把品牌故事做成能卖货的内容</h3>
+            <p class="modal-signal">信号依据：10 月 27 日《经济参考报》双 11 观察：天猫取消跨店满减改官方立减，淘工厂与国货严选对产业带工厂、老字号、原创设计商家给佣金返还 + 专属标识 + 运营陪跑 + AI 工作室扶持；抖音用分层流量激励支持中小商家、非遗与产业带商家；京东以老字号馆、中国地标馆、助农馆做长期通道。此前 9 月商务部等 7 部门《品质电商「五优」行动》明确纠治「自动跟价」「全网最低价」，今年 8 月工信部等 6 部门《历史经典产业意见》提出 2028 年塑造 100 个中国消费名品、鼓励借电商直播短视频讲经典产业故事。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>手里有真东西但不会讲的卖家：老字号与地方名特产的二代经营者、非遗工坊（丝绸、瓷器、茶叶、酿造、文房、工艺美术）、县域产业带工厂。决策人通常是老板本人或刚接班的子女。触达：地方商务局与文旅局的产业带培训、老字号协会、非遗保护中心、淘工厂与 1688 的商家群——这类商家极度缺人，主动上门基本不会被拒。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>平台流量规则从「谁便宜给谁」转向「谁有品质和故事给谁」，但这批商家的详情页还停在「产地直发、厂家直销」。交付：一套品牌叙事（历史线、工艺线、用料线）+ 12–20 条能上货架的图文与短视频（工艺拆解、老师傅手部特写、使用场景）+ 详情页与主图重做 + 一份可直接对接平台专属标识与运营陪跑的申报材料。客户买的不是「设计」，是「规则切换时别掉队」。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>核心能力是采访、写故事、拍工坊、剪片子，全是内容手艺；AI 能做访谈提纲、文案初稿、分镜与字幕，2 人一个月能同时服务 4–6 家。不需要工厂、不需要库存、不需要资质。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：设备就是手机、麦克风、灯，差旅是主要开销；按项目 1.5–4 万元/家（估算），或「内容月包」6000–1.2 万元/月（估算），先做 1 家出案例再复制。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>别接「保证上平台专属标识」的单——标识和陪跑名额是平台与地方给的名额，你只能做材料，不能承诺结果。
+非遗和老字号的「故事」很多是口头传说，没有史料支撑，写进详情页就是虚假宣传；涉及「国家级/省级非遗」「中华老字号」字样，必须让对方出证书原件再写。
+这类客户决策慢、预算走审批、极爱改稿；合同必须写清改稿 2 轮为限、首付款 50%，否则一个单能拖掉两个月。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：找本地 1 家非遗工坊或老字号，免费拍一条 3 分钟的「工艺拆解」视频，把拍前拍后的咨询量记下来，带着这条片子去谈第二家。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.jjckb.cn/20261027/ebb05004dd244ba88ccb3e030e1e46d1/c.html" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-2">
+          <div class="modal-mask" onclick="closeOpp(2)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(2)" title="关闭">×</button>
+            <div class="modal-tag">国内·服务型</div>
+            <h3 class="modal-title">即时零售从「送得快」转向「有好货」：帮本地商超把商品搬进闪购并重新排货</h3>
+            <p class="modal-signal">信号依据：10 月 27 日《经济参考报》报道：商务部研究院预计 2030 年即时零售规模达 2 万亿元、十五五期间年均增速 12.6%；美团核心本地商业 CEO 王莆中称即时零售已跨过需求培养与网络铺设阶段，下一站从「店仓配时代」迈入「商品时代」，未来三年美团闪购将在基础设施、产品研发、商品营销投入 300 亿元共建「30 分钟商品圈」。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>有实体店但线上几乎空白的本地商家：社区超市、生鲜店、母婴店、药店、五金与文具店、区域连锁。老板最典型的一句话是「我们上了闪购，一天就几单」。触达：直接扫街进店、本地商户群、快消品经销商与业务员转介（他们手里全是这类店的名单）。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>平台补贴和流量正在往「商品组织能力」上倾斜，而多数小店的问题是：上架 200 个 SKU，150 个是错的（大包装、低频、不适合 30 分钟配送），图是随手拍的货架照，标题是厂家型号。交付：一次「可配送商品结构」重排（砍掉不合适的、补上高频刚需）+ 60–150 个 SKU 的拍摄与标题改写 + 一组凑单满减组合 + 每周一次动销复盘。按店收月度服务费，续费逻辑就是「单量涨不涨」。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>活是选品判断、拍照、改标题、配活动，全在商家后台操作，不需要开发；一个熟手一天能处理一家店的商品结构，2 人跑 15–25 家店可行。懂零售或做过电商运营的人上手最快。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：一部手机加一个简易拍摄台几百元，零库存零加盟；单店改造 2000–5000 元（估算），月度维护 1000–3000 元/店（估算）。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>别承诺单量——闪购流量归平台分配，你能控制的只有商品结构和图片；把 KPI 定在「上架合格率、动销 SKU 数、缺货率」上。
+小店老板对花钱极度敏感，第一次必须用小钱验证：先做 1 家一个月，用动销数据说话，不要一上来卖年包。
+生鲜、药品、母婴各有资质与温控要求，没有对应证照的品类别碰；药品线上销售尤其容易被平台和监管一起罚。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：选 1 家熟人的社区超市，把它的外卖端 SKU 全部导出，按「30 分钟内能送到且高频」筛一遍，砍掉一半、补 30 个，重拍主图，记录两周动销变化。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.jjckb.cn/20261027/ebb05004dd244ba88ccb3e030e1e46d1/c.html" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-3">
+          <div class="modal-mask" onclick="closeOpp(3)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(3)" title="关闭">×</button>
+            <div class="modal-tag">外贸·合规窗口期</div>
+            <h3 class="modal-title">TikTok Shop 东南亚售后新规今天生效：帮卖家把「打包视频」变成能赢申诉的证据链</h3>
+            <p class="modal-signal">信号依据：TikTok Shop 东南亚跨境与本土站更新《退货与退款政策》，2026 年 10 月 27 日生效：平台已批准的首轮退款申请，卖家须在 7 个自然日内提出申诉，逾期无法申诉；同时调整打包与开箱视频的举证要求，涉及退回商品不符、零部件缺失、商品损坏等情形，须提交连续、清晰的视频材料。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>TikTok Shop 东南亚（印尼、泰国、越南、马来、菲律宾）有量的中国卖家：3C 配件、美妆、服饰、小家电。触达：TikTok 卖家群与知识星球、东南亚站代运营同行转介、正在被退款薅的卖家（他们最急）。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>新规把胜负押在视频证据上，但绝大多数卖家的仓库还在「随手拍一张」。交付：一套打包视频 SOP（机位、时长、必须入镜的信息、文件命名与归档）+ 按「商品不符/缺件/损坏」分场景的申诉模板库 + 一次仓库落地培训与抽检。客户买的是「7 天内能把钱要回来」，这直接对应账上现金。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>核心是流程设计、模板撰写和现场培训，属于文档与流程活；一个懂跨境后台的人加 AI 写模板，一周能交付一家。不需要开发，也不需要进出口资质。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：零设备投入（用卖家现有手机和货架即可），成本是出差与培训时间；按店 5000–1.5 万元/次（估算），后续季度抽检维护 3000–8000 元（估算）。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>这是「流程与证据服务」，不是「帮你赢所有申诉」——判定权在平台，合同必须写明不承诺申诉成功率。
+7 天窗口意味着错过就彻底没了，接单前先问清对方有没有专人盯后台；没人盯的店你救不了，还会被赖。
+别教卖家「补拍」视频——伪造举证一旦被平台识别是封店级违规，宁可放弃这一单。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：拿 1 个真实退款案例，按新规拍一条完整打包视频（含称重、封箱、面单特写、连续不剪辑），写成一页 SOP，发到 2 个东南亚卖家群换 2 个试做名额。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.ebrun.com/20261025/716342.shtml" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('show', window.scrollY>520);
+  });
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.openOpp=function(i){document.getElementById('opp-modal-'+i).classList.add('show')};
+  window.closeOpp=function(i){document.getElementById('opp-modal-'+i).classList.remove('show')};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(function(m){m.classList.remove('show')})}
+  });
+})();
+</script>
+</body>
+</html>
