@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 日报 · 2026年11月9日 星期一</title>
+<style>
+:root{
+  --bg:#0c0e14; --bg2:#11141d; --card:#161a25; --card2:#1b2030;
+  --bd:#232a3a; --tx:#e7ecf5; --mut:#9aa6bd; --mut2:#6b768c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1a1f33 0%,var(--bg) 55%) fixed,var(--bg);
+  color:var(--tx); line-height:1.6; padding-bottom:80px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:54px 0 26px;text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:3px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  background:rgba(255,255,255,.02)
+}
+.hero h1{
+  font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+  background:linear-gradient(92deg,#a78bfa 0%,#60a5fa 38%,#34d399 70%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .date{font-size:clamp(16px,2.4vw,22px);color:var(--tx);font-weight:600;margin-top:10px}
+.hero .sub{color:var(--mut);font-size:14px;margin-top:6px}
+.hero .meta{color:var(--mut2);font-size:13px;margin-top:4px}
+.hstats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hstat{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:16px 22px;min-width:148px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  border-top:3px solid var(--c);
+}
+.hstat-emoji{font-size:22px}
+.hstat-num{font-size:30px;font-weight:800;color:var(--c);line-height:1.1}
+.hstat-label{font-size:12.5px;color:var(--mut)}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(12,14,20,.82);border-bottom:1px solid var(--bd);
+  margin-top:14px;
+}
+.nav-inner{display:flex;flex-wrap:wrap;gap:6px;padding:11px 20px;max-width:1180px;margin:0 auto}
+.nav-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--mut);
+  padding:7px 13px;border:1px solid var(--bd);border-radius:999px;
+  transition:.18s;background:rgba(255,255,255,.02)
+}
+.nav-link:hover{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav-link .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.nav-link .cnt{font-size:11px;color:var(--mut2);background:rgba(255,255,255,.05);border-radius:999px;padding:1px 7px}
+
+/* SECTIONS */
+.section{padding:38px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-emoji{font-size:26px}
+.sec-title{font-size:23px;font-weight:750}
+.sec-cnt{margin-left:auto;font-size:13px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:3px 12px;background:rgba(255,255,255,.02)}
+.sec-title::after{content:"";display:block;height:3px;width:46px;margin-top:6px;border-radius:3px;background:var(--c)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c);opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 34px -16px var(--c)}
+.card-top{display:flex;align-items:center;gap:10px}
+.badge{
+  font-size:14px;font-weight:800;color:var(--c);min-width:38px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--c) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:9px
+}
+.chip{
+  font-size:12px;color:var(--mut);background:rgba(255,255,255,.04);
+  border:1px solid var(--bd);border-radius:999px;padding:4px 11px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%
+}
+.card-title{font-size:16.5px;font-weight:700;line-height:1.42}
+.card-title a{transition:.15s}
+.card-title a:hover{color:var(--c)}
+.card-sum{font-size:14px;color:var(--mut);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--bd);padding-top:11px;margin-top:2px}
+.time{font-size:12.5px;color:var(--mut2)}
+.orig{font-size:13px;font-weight:600;color:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:9px;padding:5px 12px;
+  transition:.15s;white-space:nowrap}
+.orig:hover{background:var(--c);color:#0c0e14}
+.card.opp{background:linear-gradient(180deg,#1a1526,#211a2e)}
+.opp-btn{
+  font-size:13px;font-weight:600;color:#f59e0b;cursor:pointer;
+  background:color-mix(in srgb,#f59e0b 12%,transparent);
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;
+  padding:6px 14px;transition:.15s;font-family:inherit
+}
+.opp-btn:hover{background:#f59e0b;color:#0c0e14}
+
+/* 商机详情模态框 */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-mask{position:absolute;inset:0;background:rgba(6,8,14,.72);backdrop-filter:blur(4px)}
+.modal-box{
+  position:relative;max-width:600px;width:100%;max-height:86vh;overflow:auto;
+  background:linear-gradient(180deg,#1b2030,#151927);
+  border:1px solid color-mix(in srgb,#f59e0b 40%,var(--bd));border-radius:18px;
+  padding:24px 26px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)
+}
+.modal-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mut);
+  font-size:19px;line-height:1;cursor:pointer;transition:.15s
+}
+.modal-close:hover{color:var(--tx);border-color:var(--mut)}
+.modal-tag{display:inline-block;font-size:12px;color:#f59e0b;border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);
+  border-radius:999px;padding:3px 12px;background:color-mix(in srgb,#f59e0b 10%,transparent);margin-bottom:10px}
+.modal-title{font-size:21px;font-weight:750;line-height:1.35;margin-bottom:8px}
+.modal-signal{font-size:13.5px;color:var(--mut);background:rgba(255,255,255,.03);
+  border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.modal-body{display:flex;flex-direction:column;gap:14px}
+.mrow{display:flex;flex-direction:column;gap:4px}
+.mk{font-size:12.5px;font-weight:600;color:#f59e0b;letter-spacing:.5px}
+.mrow p{font-size:14px;color:var(--tx);line-height:1.65;white-space:pre-line}
+.mrow.warn{border-left:3px solid #f87171;background:rgba(248,113,113,.06);
+  border-radius:0 10px 10px 0;padding:6px 14px 8px 12px;margin-left:2px}
+.mk.warn{color:#f87171}
+.opp-link{display:inline-block;margin-top:18px;font-size:13.5px;font-weight:600;color:#f59e0b;
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;padding:7px 14px;transition:.15s}
+.opp-link:hover{background:#f59e0b;color:#0c0e14}
+
+/* FOOTER */
+.foot{margin-top:46px;padding:22px 0 8px;border-top:1px solid var(--bd);
+  color:var(--mut2);font-size:13px;text-align:center;line-height:1.9}
+.foot a{color:var(--mut)}
+.to-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#0c0e14;font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 26px -10px #60a5fa;opacity:0;pointer-events:none;transition:.25s;z-index:30
+}
+.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:560px){.hstat{min-width:44%}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <span class="kicker">AI · HOT · DAILY</span>
+  <h1>AI HOT 日报</h1>
+  <div class="date">2026年11月9日 星期一</div>
+  <div class="sub">今日 AI 圈精选 · 共 1 条</div>
+  <div class="meta">生成于 11月9日 08:00（北京时间） ｜ 收录区间 11月8日 08:00（北京时间） – 11月9日 08:00（北京时间）</div>
+  <div class="hstats"><div class="hstat" style="--c:#34d399"><span class="hstat-emoji">📊</span><span class="hstat-num">1</span><span class="hstat-label">行业动态</span></div><div class="hstat" style="--c:#f59e0b"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">今日商机</span></div></div>
+</header>
+
+<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#sec-industry" style="--c:#34d399"><span class="dot"></span>行业动态<span class="cnt">1</span></a><a class="nav-link" href="#sec-opportunities" style="--c:#f59e0b"><span class="dot"></span>今日商机<span class="cnt">3</span></a></div></nav>
+
+<main class="wrap">
+
+    <section id="sec-industry" class="section" style="--c:#34d399">
+      <div class="sec-head">
+        <span class="sec-emoji">📊</span>
+        <h2 class="sec-title">行业动态</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">01</span>
+            <span class="chip" title="X：Rohan Paul (@rohanpaul_ai)">X：Rohan Paul (@rohanpaul_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/rohanpaul_ai/status/2119540787147059491" target="_blank" rel="noopener noreferrer">NVIDIA 董事会宣布就 CEO 黄仁勋遭外国情报行动瞄准一事启动独立调查</a>
+          </h3>
+          <p class="card-sum">NVIDIA 董事会于 11 月 8 日发布声明，就近期有关创始人兼 CEO 黄仁勋成为外国情报行动目标的报道启动独立…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月9日 星期一</span>
+            <a class="orig" href="https://x.com/rohanpaul_ai/status/2119540787147059491" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+
+    <section id="sec-opportunities" class="section" style="--c:#f59e0b">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">今日商机</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 01</span>
+            <span class="chip">国内·内容产品型</span>
+          </div>
+          <h3 class="card-title">公众号小说改微短剧：5%额外分成，缺的是中间人</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>微信开放平台联合视频号团队11月8日公布「公众号小说改编微短剧」首期激励：作者与短剧承制方在2026年11月1日至12月31日期间签约，并把短剧优先在微信生态发行，双方可各拿发行前30天变现收入额外5%的现金激励，上不封顶。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(1)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 02</span>
+            <span class="chip">国内·服务型</span>
+          </div>
+          <h3 class="card-title">视频号七成GMV靠达人直播：素人分销比投流更划算</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11月3日微信小店发布「星朋友来了」明星带货激励（最高40万点成长卡），同时披露视频号电商结构：约70%的GMV由达人直播贡献，品牌自播仅占30%；40岁以上用户占比超35%，女性购买用户达78%，300元以上商品贡献超五成GMV。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(2)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 03</span>
+            <span class="chip">外贸·新平台窗口</span>
+          </div>
+          <h3 class="card-title">美国家居需求回暖：中国工厂上Wayfair还几乎没人抢</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11月9日跨境周报披露Wayfair第三季度营收34.2亿美元、同比增长9.7%，净利润6200万美元扭亏，活跃客户增至2220万，销售增速创疫情以来最高。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(3)">查看分析</button>
+          </div>
+        </article></div>
+    </section>
+</main>
+
+<footer class="foot wrap">
+  本日报共 <b style="color:var(--mut)">1</b> 条 ｜ 数据来源：公开资讯渠道自动化聚合，每条附原文出处<br>
+  生成于 11月9日 08:00（北京时间） ｜ 收录区间 11月8日 08:00（北京时间） – 11月9日 08:00（北京时间）
+</footer>
+
+
+        <div class="modal" id="opp-modal-1">
+          <div class="modal-mask" onclick="closeOpp(1)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(1)" title="关闭">×</button>
+            <div class="modal-tag">国内·内容产品型</div>
+            <h3 class="modal-title">公众号小说改微短剧：5%额外分成，缺的是中间人</h3>
+            <p class="modal-signal">信号依据：微信开放平台联合视频号团队11月8日公布「公众号小说改编微短剧」首期激励：作者与短剧承制方在2026年11月1日至12月31日期间签约，并把短剧优先在微信生态发行，双方可各拿发行前30天变现收入额外5%的现金激励，上不封顶。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>两类人：写了几年小说或长故事、有存稿但不会谈改编的公众号作者；手里有几十万字老故事、想再榨一次价值的号主。触达：公众号写作社群、番茄/七猫作者群、直接私信连载类号主。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>作者的痛点是「不知道谁在收、怎么谈、值多少钱」，承制方缺的是能过审的好本子。中间这层现在几乎没人做：筛本子、改写成短剧节奏的大纲、对接承制方、把5%激励和分账写进合同。按项目收服务费或分成。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>2到3人够了：一人读本子判断能不能改，一人对接承制方，AI做节奏拆解和分集大纲。不需要拍摄资质，也不压钱。前提是你能判断故事好不好看；完全没读过网文的人，先做承制方这一侧的本子筛选。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：零工具成本，主要是读本子的时间；按项目收5000到2万元（估算），或按作者分成抽15%到20%（估算）。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>5%是「发行前30天变现收入」的5%，不是总盘子：短剧发行首月往往还在铺量，真实到账金额可能只有四位数。
+版权链必须一次查清：小说是否独家签给平台、有无影视改编权、共著作者是否同意，任何一环缺失都会让承制方中途退出。
+「优先在微信生态发行」是排他条款：签之前先算清楚，为这5%放弃其他平台首发值不值。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：从公众号里挑3个已完结的连载故事，各写一份800字改编评估（主线、可拆集数、钩子位置），拿去找1家短剧承制方换一次真实报价。</p></div>
+            </div>
+            <a class="opp-link" href="https://news.qq.com/rain/a/20261108A091GW00" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-2">
+          <div class="modal-mask" onclick="closeOpp(2)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(2)" title="关闭">×</button>
+            <div class="modal-tag">国内·服务型</div>
+            <h3 class="modal-title">视频号七成GMV靠达人直播：素人分销比投流更划算</h3>
+            <p class="modal-signal">信号依据：11月3日微信小店发布「星朋友来了」明星带货激励（最高40万点成长卡），同时披露视频号电商结构：约70%的GMV由达人直播贡献，品牌自播仅占30%；40岁以上用户占比超35%，女性购买用户达78%，300元以上商品贡献超五成GMV。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>有货但没有达人资源的中小品牌与档口老板，尤其是客单价300元以上的滋补、家居、中老年服饰类目。触达：微信小店商家群、视频号带货社群、1688与产业带档口。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>平台把资源全押在头部明星，中小商家拿不到；但真正撑起成交的是中腰部素人主播。帮商家找20到50个几千粉的素人主播做分销，比自己投流便宜得多。按人头服务费或成交抽点。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>一个人能维护几十个素人主播的关系，AI批量生成选品话术和短视频脚本，边际成本很低。不需要供应链，也不需要出镜。手上完全没有商家资源的，先自己做号接到第一单再谈。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：主要是加人和沟通的时间成本；按月收3000到8000元一个商家（估算），或按成交额抽5%到10%（估算）。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>别去碰「星朋友」那档：要求总GMV 100万元以上、自投不低于补贴的20%、单场直播超4小时，那不是小团队能接的活。
+素人主播流失极快：今天接了你的品，明天就换别家，靠单次合作留不住，必须做成长期分佣关系。
+300元以上客单退货率高：中老年向商品尤其明显，抽点要按「确认收货后」结算，别按成交额算。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：找2个客单300元以上的微信小店商家，各帮他们谈下5个素人主播试播，用一场真实成交数据换下一家的合作。</p></div>
+            </div>
+            <a class="opp-link" href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6116af0408946252" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-3">
+          <div class="modal-mask" onclick="closeOpp(3)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(3)" title="关闭">×</button>
+            <div class="modal-tag">外贸·新平台窗口</div>
+            <h3 class="modal-title">美国家居需求回暖：中国工厂上Wayfair还几乎没人抢</h3>
+            <p class="modal-signal">信号依据：11月9日跨境周报披露Wayfair第三季度营收34.2亿美元、同比增长9.7%，净利润6200万美元扭亏，活跃客户增至2220万，销售增速创疫情以来最高。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>佛山家具、东莞家居、永康五金等产业带的工厂与贸易商——有货、想做美国市场，但亚马逊家居类目已经卷不动。触达：产业带商家群、跨境卖家社群、货代与海外仓服务商转介绍。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>Wayfair是美国家居垂类平台，中国卖家密度远低于亚马逊，竞争还没起来。交付：类目与价格带选品、英文listing与场景图脚本、CastleGate入仓与账期测算。按项目或月度顾问费收。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>2到3人够用：一人懂产品、一人懂平台规则与英文内容，AI做类目调研、翻译和图文脚本，不囤货也能先卖服务。只适合有家居供应链资源或跨境经验的人；两头都不占的读者，先做这条链路上的内容与选品咨询。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>中（估算）：只做咨询与代运营，2万元以内可启动（估算）；自己备货入仓需20万元以上（估算，视体积而定）。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>账期比想象中长：Wayfair回款周期普遍在60天以上，现金流撑不住的小工厂会被拖死，先算清垫资能力。
+大件退货成本极高：家具退货一趟运费可能吃掉整单利润，包装和安装说明是硬门槛。
+别信「中国公司直接开店」的中介话术：美国实体、税号、保险都有硬要求，先跑通一个小件SKU再谈大件。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：从佛山或东莞挑3个已在美国有销量的SKU，做一张含平台佣金、CastleGate仓储、末端配送、退货预留的到岸成本表，拿这份表去谈第一个付费诊断单。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.ebrun.com/20261109/718574.shtml" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('show', window.scrollY>520);
+  });
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.openOpp=function(i){document.getElementById('opp-modal-'+i).classList.add('show')};
+  window.closeOpp=function(i){document.getElementById('opp-modal-'+i).classList.remove('show')};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(function(m){m.classList.remove('show')})}
+  });
+})();
+</script>
+</body>
+</html>
