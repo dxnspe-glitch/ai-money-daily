@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 日报 · 2026年11月15日 星期日</title>
+<style>
+:root{
+  --bg:#0c0e14; --bg2:#11141d; --card:#161a25; --card2:#1b2030;
+  --bd:#232a3a; --tx:#e7ecf5; --mut:#9aa6bd; --mut2:#6b768c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1a1f33 0%,var(--bg) 55%) fixed,var(--bg);
+  color:var(--tx); line-height:1.6; padding-bottom:80px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:54px 0 26px;text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:3px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  background:rgba(255,255,255,.02)
+}
+.hero h1{
+  font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+  background:linear-gradient(92deg,#a78bfa 0%,#60a5fa 38%,#34d399 70%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .date{font-size:clamp(16px,2.4vw,22px);color:var(--tx);font-weight:600;margin-top:10px}
+.hero .sub{color:var(--mut);font-size:14px;margin-top:6px}
+.hero .meta{color:var(--mut2);font-size:13px;margin-top:4px}
+.hstats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hstat{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:16px 22px;min-width:148px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  border-top:3px solid var(--c);
+}
+.hstat-emoji{font-size:22px}
+.hstat-num{font-size:30px;font-weight:800;color:var(--c);line-height:1.1}
+.hstat-label{font-size:12.5px;color:var(--mut)}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(12,14,20,.82);border-bottom:1px solid var(--bd);
+  margin-top:14px;
+}
+.nav-inner{display:flex;flex-wrap:wrap;gap:6px;padding:11px 20px;max-width:1180px;margin:0 auto}
+.nav-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--mut);
+  padding:7px 13px;border:1px solid var(--bd);border-radius:999px;
+  transition:.18s;background:rgba(255,255,255,.02)
+}
+.nav-link:hover{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav-link .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.nav-link .cnt{font-size:11px;color:var(--mut2);background:rgba(255,255,255,.05);border-radius:999px;padding:1px 7px}
+
+/* SECTIONS */
+.section{padding:38px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-emoji{font-size:26px}
+.sec-title{font-size:23px;font-weight:750}
+.sec-cnt{margin-left:auto;font-size:13px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:3px 12px;background:rgba(255,255,255,.02)}
+.sec-title::after{content:"";display:block;height:3px;width:46px;margin-top:6px;border-radius:3px;background:var(--c)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c);opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 34px -16px var(--c)}
+.card-top{display:flex;align-items:center;gap:10px}
+.badge{
+  font-size:14px;font-weight:800;color:var(--c);min-width:38px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--c) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:9px
+}
+.chip{
+  font-size:12px;color:var(--mut);background:rgba(255,255,255,.04);
+  border:1px solid var(--bd);border-radius:999px;padding:4px 11px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%
+}
+.card-title{font-size:16.5px;font-weight:700;line-height:1.42}
+.card-title a{transition:.15s}
+.card-title a:hover{color:var(--c)}
+.card-sum{font-size:14px;color:var(--mut);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--bd);padding-top:11px;margin-top:2px}
+.time{font-size:12.5px;color:var(--mut2)}
+.orig{font-size:13px;font-weight:600;color:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:9px;padding:5px 12px;
+  transition:.15s;white-space:nowrap}
+.orig:hover{background:var(--c);color:#0c0e14}
+.card.opp{background:linear-gradient(180deg,#1a1526,#211a2e)}
+.opp-btn{
+  font-size:13px;font-weight:600;color:#f59e0b;cursor:pointer;
+  background:color-mix(in srgb,#f59e0b 12%,transparent);
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;
+  padding:6px 14px;transition:.15s;font-family:inherit
+}
+.opp-btn:hover{background:#f59e0b;color:#0c0e14}
+
+/* 商机详情模态框 */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-mask{position:absolute;inset:0;background:rgba(6,8,14,.72);backdrop-filter:blur(4px)}
+.modal-box{
+  position:relative;max-width:600px;width:100%;max-height:86vh;overflow:auto;
+  background:linear-gradient(180deg,#1b2030,#151927);
+  border:1px solid color-mix(in srgb,#f59e0b 40%,var(--bd));border-radius:18px;
+  padding:24px 26px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)
+}
+.modal-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mut);
+  font-size:19px;line-height:1;cursor:pointer;transition:.15s
+}
+.modal-close:hover{color:var(--tx);border-color:var(--mut)}
+.modal-tag{display:inline-block;font-size:12px;color:#f59e0b;border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);
+  border-radius:999px;padding:3px 12px;background:color-mix(in srgb,#f59e0b 10%,transparent);margin-bottom:10px}
+.modal-title{font-size:21px;font-weight:750;line-height:1.35;margin-bottom:8px}
+.modal-signal{font-size:13.5px;color:var(--mut);background:rgba(255,255,255,.03);
+  border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.modal-body{display:flex;flex-direction:column;gap:14px}
+.mrow{display:flex;flex-direction:column;gap:4px}
+.mk{font-size:12.5px;font-weight:600;color:#f59e0b;letter-spacing:.5px}
+.mrow p{font-size:14px;color:var(--tx);line-height:1.65;white-space:pre-line}
+.mrow.warn{border-left:3px solid #f87171;background:rgba(248,113,113,.06);
+  border-radius:0 10px 10px 0;padding:6px 14px 8px 12px;margin-left:2px}
+.mk.warn{color:#f87171}
+.opp-link{display:inline-block;margin-top:18px;font-size:13.5px;font-weight:600;color:#f59e0b;
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;padding:7px 14px;transition:.15s}
+.opp-link:hover{background:#f59e0b;color:#0c0e14}
+
+/* FOOTER */
+.foot{margin-top:46px;padding:22px 0 8px;border-top:1px solid var(--bd);
+  color:var(--mut2);font-size:13px;text-align:center;line-height:1.9}
+.foot a{color:var(--mut)}
+.to-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#0c0e14;font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 26px -10px #60a5fa;opacity:0;pointer-events:none;transition:.25s;z-index:30
+}
+.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:560px){.hstat{min-width:44%}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <span class="kicker">AI · HOT · DAILY</span>
+  <h1>AI HOT 日报</h1>
+  <div class="date">2026年11月15日 星期日</div>
+  <div class="sub">今日 AI 圈精选 · 共 6 条</div>
+  <div class="meta">生成于 11月15日 08:00（北京时间） ｜ 收录区间 11月14日 08:00（北京时间） – 11月15日 08:00（北京时间）</div>
+  <div class="hstats"><div class="hstat" style="--c:#34d399"><span class="hstat-emoji">📊</span><span class="hstat-num">4</span><span class="hstat-label">行业动态</span></div><div class="hstat" style="--c:#fbbf24"><span class="hstat-emoji">📄</span><span class="hstat-num">1</span><span class="hstat-label">论文研究</span></div><div class="hstat" style="--c:#f472b6"><span class="hstat-emoji">💡</span><span class="hstat-num">1</span><span class="hstat-label">技巧与观点</span></div><div class="hstat" style="--c:#f59e0b"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">今日商机</span></div></div>
+</header>
+
+<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#sec-industry" style="--c:#34d399"><span class="dot"></span>行业动态<span class="cnt">4</span></a><a class="nav-link" href="#sec-papers" style="--c:#fbbf24"><span class="dot"></span>论文研究<span class="cnt">1</span></a><a class="nav-link" href="#sec-tips" style="--c:#f472b6"><span class="dot"></span>技巧与观点<span class="cnt">1</span></a><a class="nav-link" href="#sec-opportunities" style="--c:#f59e0b"><span class="dot"></span>今日商机<span class="cnt">3</span></a></div></nav>
+
+<main class="wrap">
+
+    <section id="sec-industry" class="section" style="--c:#34d399">
+      <div class="sec-head">
+        <span class="sec-emoji">📊</span>
+        <h2 class="sec-title">行业动态</h2>
+        <span class="sec-cnt">4 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">01</span>
+            <span class="chip" title="TechCrunch：AI（RSS）">TechCrunch：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/" target="_blank" rel="noopener noreferrer">马斯克等高管联署请愿，要求 Nvidia 恢复黄仁勋 CEO 职务</a>
+          </h3>
+          <p class="card-sum">要求 Nvidia 恢复被罢免 CEO 黄仁勋职务的请愿书，截至周六下午已获得超过 11.5 万个签名，包括 5,96…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月15日 星期日</span>
+            <a class="orig" href="https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">02</span>
+            <span class="chip" title="Cursor Blog">Cursor Blog</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener noreferrer">Cursor 披露安全事件调查结果，恶意 Claude Code 扩展波及最多 5000 用户</a>
+          </h3>
+          <p class="card-sum">Cursor 发布安全事件完整调查：攻击者利用 Fireworks 暴露的访问密钥读取用于模型训练的 coding a…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月15日 星期日</span>
+            <a class="orig" href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">03</span>
+            <span class="chip" title="TechCrunch：AI（RSS）">TechCrunch：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/" target="_blank" rel="noopener noreferrer">黄仁勋离开 Nvidia 后，亚洲各国政府如何回应</a>
+          </h3>
+          <p class="card-sum">黄仁勋离开 Nvidia 后，亚洲多国政府相继回应：韩国科技部称 Nvidia 重申将向韩国供应 260,000 块先…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月15日 星期日</span>
+            <a class="orig" href="https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">04</span>
+            <span class="chip" title="X：Rohan Paul (@rohanpaul_ai)">X：Rohan Paul (@rohanpaul_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/rohanpaul_ai/status/2121391185499660332" target="_blank" rel="noopener noreferrer">美联储金融稳定报告：AI成为华尔街头号金融风险</a>
+          </h3>
+          <p class="card-sum">美联储发布金融稳定报告，纽约联储调查显示87%的市场人士将AI列为首要金融风险，高于春季的50%。报告称对超级智能的市…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月15日 星期日</span>
+            <a class="orig" href="https://x.com/rohanpaul_ai/status/2121391185499660332" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-papers" class="section" style="--c:#fbbf24">
+      <div class="sec-head">
+        <span class="sec-emoji">📄</span>
+        <h2 class="sec-title">论文研究</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#fbbf24">
+          <div class="card-top">
+            <span class="badge">05</span>
+            <span class="chip" title="Thinking Machines Lab：官方博客">Thinking Machines Lab：官方博客</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://thinkingmachines.ai/blog/end-to-end-4-bit-training/" target="_blank" rel="noopener noreferrer">Thinking Machines Lab 发布端到端 4-bit 训练技术报告</a>
+          </h3>
+          <p class="card-sum">Thinking Machines Lab 公布端到端 4-bit 训练方法，在 Inkling 2 Small 上从…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月15日 星期日</span>
+            <a class="orig" href="https://thinkingmachines.ai/blog/end-to-end-4-bit-training/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-tips" class="section" style="--c:#f472b6">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">技巧与观点</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">06</span>
+            <span class="chip" title="Nathan Lambert：Interconnects（RSS）">Nathan Lambert：Interconnects（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.interconnects.ai/p/open-source-ai-without-jensen" target="_blank" rel="noopener noreferrer">Nathan Lambert 分析黄仁勋辞职后美国开源模型生态的真空</a>
+          </h3>
+          <p class="card-sum">Nathan Lambert 撰文分析 Nvidia CEO 黄仁勋辞职对美国开源模型生态的冲击，认为 Nvidia …</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月15日 星期日</span>
+            <a class="orig" href="https://www.interconnects.ai/p/open-source-ai-without-jensen" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+
+    <section id="sec-opportunities" class="section" style="--c:#f59e0b">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">今日商机</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 01</span>
+            <span class="chip">国内·内容产品型</span>
+          </div>
+          <h3 class="card-title">AI 漫剧开放了 6 万部小说版权：帮想下场的人先算清「一部剧回不回本」</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>红果短剧依托抖音集团短剧创作者中心，向机构、一人公司（OPC）及个体创作者开放 6 万余部番茄小说网文 IP 的改编权限，合作方可拿全渠道免付费净收益最高 90% 分成；11 月 14 日证券日报报道，AI 漫剧《持械入宋》主创无影视科班背景、靠千元网课自学、OPC 远程协同完成，全网播放破 120 亿，而行业单部 80 分钟作品成本已从 10 万元降至 4 万元、每分钟从 1250 元降至 500 元，算力词元取代人工成为第一大成本。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(1)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 02</span>
+            <span class="chip">国内·服务型</span>
+          </div>
+          <h3 class="card-title">育儿补贴 3600 元一年、12 月 31 日分年份截止：帮家庭把能领的钱一次领全</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11 月 14 日媒体梳理：国家育儿补贴按每孩每年 3600 元发到满 3 岁、三年满额 10800 元，2026 年度已发放超 2500 万人、中央财政补助 999 亿元，申请截止按出生年份分档——2022 年出生的只能申请 1 次且截止 2026 年 12 月 31 日，2023 年出生的两次均在 2026 年底前提交；此前未申请的 2022–2024 年出生儿童截止时间已统一延长至 2026 年 12 月 31 日。同时生育津贴已全面直发个人、前 9 个月支出 781.61 亿元，23 个省份、216 个统筹地区把灵活就业人员纳入生育保险。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(2)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 03</span>
+            <span class="chip">外贸·合规省费窗口</span>
+          </div>
+          <h3 class="card-title">亚马逊「一测通」放开电子电器：16 个站点共用一份检测，帮卖家省掉重复认证的钱</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>亚马逊 11 月 14 日宣布，全球一测通（GTO）继玩具品类后正式向电子电器品类开放：卖家做一次产品检测即可满足多个站点的合规审核，首批覆盖锂电池供电的智能家居设备与消费电子（头戴耳机、耳塞、监控摄像头、扬声器），核心项目为整机 IEC 62368-1 安全测试，另含 UL 1642、UL 2054、IEC 62133-2、UN 38.3 等锂电池标准，首批接入 Intertek、SGS、TÜV SÜD 三家实验室，检测数据可用于 16 个站点的上架审核。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(3)">查看分析</button>
+          </div>
+        </article></div>
+    </section>
+</main>
+
+<footer class="foot wrap">
+  本日报共 <b style="color:var(--mut)">6</b> 条 ｜ 数据来源：公开资讯渠道自动化聚合，每条附原文出处<br>
+  生成于 11月15日 08:00（北京时间） ｜ 收录区间 11月14日 08:00（北京时间） – 11月15日 08:00（北京时间）
+</footer>
+
+
+        <div class="modal" id="opp-modal-1">
+          <div class="modal-mask" onclick="closeOpp(1)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(1)" title="关闭">×</button>
+            <div class="modal-tag">国内·内容产品型</div>
+            <h3 class="modal-title">AI 漫剧开放了 6 万部小说版权：帮想下场的人先算清「一部剧回不回本」</h3>
+            <p class="modal-signal">信号依据：红果短剧依托抖音集团短剧创作者中心，向机构、一人公司（OPC）及个体创作者开放 6 万余部番茄小说网文 IP 的改编权限，合作方可拿全渠道免付费净收益最高 90% 分成；11 月 14 日证券日报报道，AI 漫剧《持械入宋》主创无影视科班背景、靠千元网课自学、OPC 远程协同完成，全网播放破 120 亿，而行业单部 80 分钟作品成本已从 10 万元降至 4 万元、每分钟从 1250 元降至 500 元，算力词元取代人工成为第一大成本。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>有内容判断力、手上有 2–3 人或一人公司班底、想拿 4 万元试一把的短剧/小说/自媒体创作者。触达：短剧创作者社群与番茄小说作者群、红果创作者中心招募页、抖音端原生漫剧榜单下的活跃账号私信。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>难点早已不是能不能做出来，而是选错本、算错账——同一天腾讯新闻报道，被业内认定「大爆」的 AI 短剧制作方最终到手不到 8000 元，普通内容方分账约 20%，万次播放收益已从一年前 20 元跌到 1–2 元。交付一份选本评估（题材、连载热度、改编难度、同类对标播放）加单部回本线测算（成本、需多少播放、分账比例对应到账金额），按 1500–4000 元/部（估算）收费，签合同前再收一道分账条款核对费。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>1–2 人可做：读小说、查榜单、算账，AI 用来做同题材拆解和成本表，不需要拍摄团队也不压货。核心资产是「知道哪类本子在红果能起来」的判断力。（只想学怎么做画面的读者，先别急着交学费，多数课程卖的就是这份判断力的替代品。）</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：无制作投入，成本是刷榜与读本的时间；单客户 4–8 小时。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>这条最大的坑不在制作，在分账——平台同时掌握分账规则、算力价格和流量出口，你算得再准也决定不了对方改规则，所以只卖评估不卖「保底收益」。
+行业 98.7% 的项目回不了本，万次播放 1–2 元的现实下，任何承诺「投 4 万赚 40 万」的说法都是话术；同时警惕以「招聘 AI 漫剧实习生」为名、先收 2000 元学费的招转培套路。
+别替客户垫制作费换分成：爆款到手 8000 元的案例说明分成条款的执行权完全在对方手上。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：从番茄 IP 库挑 10 部在榜小说，按题材、连载状态、同类对标播放做一张选本评估表，再挑 1 部算一份完整的回本线。</p></div>
+            </div>
+            <a class="opp-link" href="https://api.app.anhuinews.com/content/9745510.html" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-2">
+          <div class="modal-mask" onclick="closeOpp(2)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(2)" title="关闭">×</button>
+            <div class="modal-tag">国内·服务型</div>
+            <h3 class="modal-title">育儿补贴 3600 元一年、12 月 31 日分年份截止：帮家庭把能领的钱一次领全</h3>
+            <p class="modal-signal">信号依据：11 月 14 日媒体梳理：国家育儿补贴按每孩每年 3600 元发到满 3 岁、三年满额 10800 元，2026 年度已发放超 2500 万人、中央财政补助 999 亿元，申请截止按出生年份分档——2022 年出生的只能申请 1 次且截止 2026 年 12 月 31 日，2023 年出生的两次均在 2026 年底前提交；此前未申请的 2022–2024 年出生儿童截止时间已统一延长至 2026 年 12 月 31 日。同时生育津贴已全面直发个人、前 9 个月支出 781.61 亿元，23 个省份、216 个统筹地区把灵活就业人员纳入生育保险。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>2022–2024 年有孩子、又没申请过或只领了一部分的城镇家庭，尤其是自由职业、个体户、网约车司机这类没有单位代办的人。触达：本地母婴与宝妈社群、社区与妇幼保健院门口的咨询位、做母婴或职场妈妈内容的自媒体账号。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>钱是现成的、通道在支付宝微信和省级政务平台，卡点全在细节：截止年份分档、灵活就业要额外参生育保险、津贴直发个人而不是经单位。交付一份家庭申领清单（谁符合、能领几年、缺哪份材料、什么时候到账）加代跑流程，按 200–600 元/户（估算）收费，多孩家庭与生育津贴叠加的再往上加。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>1–2 人可做：读本地文件、帮人填表、盯到账，会打字就能起步，AI 用来把各地产假与津贴口径整理成对照表。对做母婴内容的人来说，这是把粉丝直接变成付费客户的最短路径。（不在本地常住、拿不到社区信息的读者，先只做内容不做代办。）</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：主要成本是各统筹地区口径的核对时间与跑腿；单户 1–2 小时。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>最容易说错的一句「交了医保就能领津贴」——参加居民医保不等于参加生育保险，灵活就业者要以职工医保身份同步参保才能享受生育津贴，办之前必须让客户问本地医保局。
+别碰两头收费的野路子：只收服务费、不经手补贴款，凡是要求提供银行卡并代收代转的，一律有骗补嫌疑。
+别承诺「一定能领到」或「截止还能补」：12 月 31 日是硬线，各地细则还在改，说死了就要担责。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：把客户所在省市两级的育儿补贴与生育津贴公告各找 2 份，做成一张「哪年出生、能领几次、几号前交」的对照表。</p></div>
+            </div>
+            <a class="opp-link" href="https://news.qq.com/rain/a/20261114A0AKES00" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-3">
+          <div class="modal-mask" onclick="closeOpp(3)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(3)" title="关闭">×</button>
+            <div class="modal-tag">外贸·合规省费窗口</div>
+            <h3 class="modal-title">亚马逊「一测通」放开电子电器：16 个站点共用一份检测，帮卖家省掉重复认证的钱</h3>
+            <p class="modal-signal">信号依据：亚马逊 11 月 14 日宣布，全球一测通（GTO）继玩具品类后正式向电子电器品类开放：卖家做一次产品检测即可满足多个站点的合规审核，首批覆盖锂电池供电的智能家居设备与消费电子（头戴耳机、耳塞、监控摄像头、扬声器），核心项目为整机 IEC 62368-1 安全测试，另含 UL 1642、UL 2054、IEC 62133-2、UN 38.3 等锂电池标准，首批接入 Intertek、SGS、TÜV SÜD 三家实验室，检测数据可用于 16 个站点的上架审核。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>同时在美国、欧洲、日本等多个亚马逊站点卖 3C 与智能家居、每开一个新站点就被要求重做一次检测的中小卖家与白牌工厂。触达：跨境电商卖家群与卖家社区、做多站点铺货的 ERP 服务商客户名单、跨境综试区与产业带的培训现场。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>同一款带电池的产品过去每上一个站点就要重测一遍，一次检测几千到几万元，16 个站点叠加就是纯浪费。交付一份站点与检测项对照表（哪些站点能被这次检测覆盖、哪些还缺本地要求）加三家实验室的报价与周期比对、报告归档，按 800–2000 元/款（估算）收顾问费，检测费由卖家直付实验室，不赚差价。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>1–2 人可做：读标准、比报价、跟进度，本质是信息撮合与文档管理，不需要实验室资质也不用垫钱。（没有跨境经验、也对接不上实验室渠道的读者，这条先跳过，国内那两条更稳。）</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低（估算）：零设备投入，成本是与三家实验室建立联系与逐款核标准的时间；单款 3–6 小时。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>GTO 免的是重复检测，不免本地责任：欧盟的 CE、EPR、电池法规，美国的 FCC 与责任险，一样都不能少，把一测通说成「全站点通行证」是这行最常见的忽悠。
+必须走平台认可名单里的实验室，第三方代理出的套证、借证报告上架后被抽查即下架，卖家损失远大于省下的检测费。
+别按检测费的百分比抽成：一旦按比例拿钱，你就有动机推更贵的项目，客户迟早会发现，复购和转介绍全没了。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：把自家或朋友在卖的三款带电池产品列出来，对着 16 个站点做一张「已覆盖/还缺什么」的空白对照表。</p></div>
+            </div>
+            <a class="opp-link" href="http://mp.weixin.qq.com/s?__biz=Mzg5MDcxMDgyNQ==&amp;mid=2247498777&amp;idx=1&amp;sn=d29a9eaea9d1ad91f79579f4ea3f6f3a" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('show', window.scrollY>520);
+  });
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.openOpp=function(i){document.getElementById('opp-modal-'+i).classList.add('show')};
+  window.closeOpp=function(i){document.getElementById('opp-modal-'+i).classList.remove('show')};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(function(m){m.classList.remove('show')})}
+  });
+})();
+</script>
+</body>
+</html>
