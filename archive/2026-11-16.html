@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 日报 · 2026年11月16日 星期一</title>
+<style>
+:root{
+  --bg:#0c0e14; --bg2:#11141d; --card:#161a25; --card2:#1b2030;
+  --bd:#232a3a; --tx:#e7ecf5; --mut:#9aa6bd; --mut2:#6b768c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1a1f33 0%,var(--bg) 55%) fixed,var(--bg);
+  color:var(--tx); line-height:1.6; padding-bottom:80px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:54px 0 26px;text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:3px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  background:rgba(255,255,255,.02)
+}
+.hero h1{
+  font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+  background:linear-gradient(92deg,#a78bfa 0%,#60a5fa 38%,#34d399 70%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .date{font-size:clamp(16px,2.4vw,22px);color:var(--tx);font-weight:600;margin-top:10px}
+.hero .sub{color:var(--mut);font-size:14px;margin-top:6px}
+.hero .meta{color:var(--mut2);font-size:13px;margin-top:4px}
+.hstats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hstat{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:16px 22px;min-width:148px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  border-top:3px solid var(--c);
+}
+.hstat-emoji{font-size:22px}
+.hstat-num{font-size:30px;font-weight:800;color:var(--c);line-height:1.1}
+.hstat-label{font-size:12.5px;color:var(--mut)}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(12,14,20,.82);border-bottom:1px solid var(--bd);
+  margin-top:14px;
+}
+.nav-inner{display:flex;flex-wrap:wrap;gap:6px;padding:11px 20px;max-width:1180px;margin:0 auto}
+.nav-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--mut);
+  padding:7px 13px;border:1px solid var(--bd);border-radius:999px;
+  transition:.18s;background:rgba(255,255,255,.02)
+}
+.nav-link:hover{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav-link .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.nav-link .cnt{font-size:11px;color:var(--mut2);background:rgba(255,255,255,.05);border-radius:999px;padding:1px 7px}
+
+/* SECTIONS */
+.section{padding:38px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-emoji{font-size:26px}
+.sec-title{font-size:23px;font-weight:750}
+.sec-cnt{margin-left:auto;font-size:13px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:3px 12px;background:rgba(255,255,255,.02)}
+.sec-title::after{content:"";display:block;height:3px;width:46px;margin-top:6px;border-radius:3px;background:var(--c)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c);opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 34px -16px var(--c)}
+.card-top{display:flex;align-items:center;gap:10px}
+.badge{
+  font-size:14px;font-weight:800;color:var(--c);min-width:38px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--c) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:9px
+}
+.chip{
+  font-size:12px;color:var(--mut);background:rgba(255,255,255,.04);
+  border:1px solid var(--bd);border-radius:999px;padding:4px 11px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%
+}
+.card-title{font-size:16.5px;font-weight:700;line-height:1.42}
+.card-title a{transition:.15s}
+.card-title a:hover{color:var(--c)}
+.card-sum{font-size:14px;color:var(--mut);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--bd);padding-top:11px;margin-top:2px}
+.time{font-size:12.5px;color:var(--mut2)}
+.orig{font-size:13px;font-weight:600;color:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:9px;padding:5px 12px;
+  transition:.15s;white-space:nowrap}
+.orig:hover{background:var(--c);color:#0c0e14}
+.card.opp{background:linear-gradient(180deg,#1a1526,#211a2e)}
+.opp-btn{
+  font-size:13px;font-weight:600;color:#f59e0b;cursor:pointer;
+  background:color-mix(in srgb,#f59e0b 12%,transparent);
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;
+  padding:6px 14px;transition:.15s;font-family:inherit
+}
+.opp-btn:hover{background:#f59e0b;color:#0c0e14}
+
+/* 商机详情模态框 */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-mask{position:absolute;inset:0;background:rgba(6,8,14,.72);backdrop-filter:blur(4px)}
+.modal-box{
+  position:relative;max-width:600px;width:100%;max-height:86vh;overflow:auto;
+  background:linear-gradient(180deg,#1b2030,#151927);
+  border:1px solid color-mix(in srgb,#f59e0b 40%,var(--bd));border-radius:18px;
+  padding:24px 26px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)
+}
+.modal-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mut);
+  font-size:19px;line-height:1;cursor:pointer;transition:.15s
+}
+.modal-close:hover{color:var(--tx);border-color:var(--mut)}
+.modal-tag{display:inline-block;font-size:12px;color:#f59e0b;border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);
+  border-radius:999px;padding:3px 12px;background:color-mix(in srgb,#f59e0b 10%,transparent);margin-bottom:10px}
+.modal-title{font-size:21px;font-weight:750;line-height:1.35;margin-bottom:8px}
+.modal-signal{font-size:13.5px;color:var(--mut);background:rgba(255,255,255,.03);
+  border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.modal-body{display:flex;flex-direction:column;gap:14px}
+.mrow{display:flex;flex-direction:column;gap:4px}
+.mk{font-size:12.5px;font-weight:600;color:#f59e0b;letter-spacing:.5px}
+.mrow p{font-size:14px;color:var(--tx);line-height:1.65;white-space:pre-line}
+.mrow.warn{border-left:3px solid #f87171;background:rgba(248,113,113,.06);
+  border-radius:0 10px 10px 0;padding:6px 14px 8px 12px;margin-left:2px}
+.mk.warn{color:#f87171}
+.opp-link{display:inline-block;margin-top:18px;font-size:13.5px;font-weight:600;color:#f59e0b;
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;padding:7px 14px;transition:.15s}
+.opp-link:hover{background:#f59e0b;color:#0c0e14}
+
+/* FOOTER */
+.foot{margin-top:46px;padding:22px 0 8px;border-top:1px solid var(--bd);
+  color:var(--mut2);font-size:13px;text-align:center;line-height:1.9}
+.foot a{color:var(--mut)}
+.to-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#0c0e14;font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 26px -10px #60a5fa;opacity:0;pointer-events:none;transition:.25s;z-index:30
+}
+.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:560px){.hstat{min-width:44%}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <span class="kicker">AI · HOT · DAILY</span>
+  <h1>AI HOT 日报</h1>
+  <div class="date">2026年11月16日 星期一</div>
+  <div class="sub">今日 AI 圈精选 · 共 17 条（官方当日无要闻，近 72 小时补充收录）</div>
+  <div class="meta">生成于 11月16日 08:00（北京时间） ｜ 收录区间 11月15日 08:00（北京时间） – 11月16日 08:00（北京时间）</div>
+  <div class="hstats"><div class="hstat" style="--c:#a78bfa"><span class="hstat-emoji">🧠</span><span class="hstat-num">2</span><span class="hstat-label">模型发布/更新</span></div><div class="hstat" style="--c:#60a5fa"><span class="hstat-emoji">🚀</span><span class="hstat-num">4</span><span class="hstat-label">产品发布/更新</span></div><div class="hstat" style="--c:#34d399"><span class="hstat-emoji">📊</span><span class="hstat-num">8</span><span class="hstat-label">行业动态</span></div><div class="hstat" style="--c:#f472b6"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">技巧与观点</span></div><div class="hstat" style="--c:#f59e0b"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">今日商机</span></div></div>
+</header>
+
+<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#sec-models" style="--c:#a78bfa"><span class="dot"></span>模型发布/更新<span class="cnt">2</span></a><a class="nav-link" href="#sec-products" style="--c:#60a5fa"><span class="dot"></span>产品发布/更新<span class="cnt">4</span></a><a class="nav-link" href="#sec-industry" style="--c:#34d399"><span class="dot"></span>行业动态<span class="cnt">8</span></a><a class="nav-link" href="#sec-tips" style="--c:#f472b6"><span class="dot"></span>技巧与观点<span class="cnt">3</span></a><a class="nav-link" href="#sec-opportunities" style="--c:#f59e0b"><span class="dot"></span>今日商机<span class="cnt">3</span></a></div></nav>
+
+<main class="wrap">
+
+    <section id="sec-models" class="section" style="--c:#a78bfa">
+      <div class="sec-head">
+        <span class="sec-emoji">🧠</span>
+        <h2 class="sec-title">模型发布/更新</h2>
+        <span class="sec-cnt">2 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">01</span>
+            <span class="chip" title="公众号：腾讯混元">公众号：腾讯混元</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://mp.weixin.qq.com/s/bFxAT04ohJs9hPcjjin3bg" target="_blank" rel="noopener noreferrer">腾讯混元发布实时语音模型 Hy Realtime，新增工具调用与唱歌能力</a>
+          </h3>
+          <p class="card-sum">腾讯混元发布全新实时语音模型 Hy Realtime，在语音理解、指令遵循、拟人化表达等基础能力外新增 Agentic…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://mp.weixin.qq.com/s/bFxAT04ohJs9hPcjjin3bg" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">02</span>
+            <span class="chip" title="美团 LongCat：HuggingFace 新模型">美团 LongCat：HuggingFace 新模型</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.6" target="_blank" rel="noopener noreferrer">美团 LongCat 开源 LongCat-Video-Avatar 1.6 音频驱动数字人视频生成模型</a>
+          </h3>
+          <p class="card-sum">美团 LongCat 团队发布开源音频驱动人体视频生成模型 LongCat-Video-Avatar 1.6，改进口型…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.6" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-products" class="section" style="--c:#60a5fa">
+      <div class="sec-head">
+        <span class="sec-emoji">🚀</span>
+        <h2 class="sec-title">产品发布/更新</h2>
+        <span class="sec-cnt">4 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">03</span>
+            <span class="chip" title="X：Ado Kukic（Anthropic 开发者关系，Claude Code） (@adocomplete)">X：Ado Kukic（Anthropic 开发者关系，Claude Code） (@adocomplete)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/adocomplete/status/2121338030967697908" target="_blank" rel="noopener noreferrer">Claude Duet 向美国等待名单上的 Pro、Max 和 Ultra 订阅者发出全部邀请</a>
+          </h3>
+          <p class="card-sum">Anthropic 的 Claude Duet 更新：截至昨日在等待名单上的全部美国 Pro、Max 和 Ultra …</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://x.com/adocomplete/status/2121338030967697908" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">04</span>
+            <span class="chip" title="Sierra：Blog（RSS）">Sierra：Blog（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://sierra.ai/blog/releasing-poppy" target="_blank" rel="noopener noreferrer">Sierra 发布 Personal Agent Protocol（Poppy）v1.0</a>
+          </h3>
+          <p class="card-sum">Sierra 宣布 Personal Agent Protocol（Poppy）v1.0 正式可用，该协议定义个人智能…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://sierra.ai/blog/releasing-poppy" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">05</span>
+            <span class="chip" title="X：ChatGPT (@ChatGPT)">X：ChatGPT (@ChatGPT)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/ChatGPT/status/2121283151729496235" target="_blank" rel="noopener noreferrer">ChatGPT 推出 ChatGPT Wallet，dot 可在用户批准下代为完成购买</a>
+          </h3>
+          <p class="card-sum">ChatGPT 官方账号宣布推出 ChatGPT Wallet，dot 可在用户批准下安全地代用户完成购买。智能体支付…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://x.com/ChatGPT/status/2121283151729496235" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">06</span>
+            <span class="chip" title="X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)">X：Clément Delangue（Hugging Face CEO） (@ClementDelangue)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/ClementDelangue/status/2121260104913768931" target="_blank" rel="noopener noreferrer">llama.cpp v1.0.0 发布，本地运行 AI 模型迎来首个稳定大版本</a>
+          </h3>
+          <p class="card-sum">Hugging Face CEO Clément Delangue 与 @ggerganov 宣布 llama.cpp…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://x.com/ClementDelangue/status/2121260104913768931" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-industry" class="section" style="--c:#34d399">
+      <div class="sec-head">
+        <span class="sec-emoji">📊</span>
+        <h2 class="sec-title">行业动态</h2>
+        <span class="sec-cnt">8 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">07</span>
+            <span class="chip" title="TechCrunch：AI（RSS）">TechCrunch：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/" target="_blank" rel="noopener noreferrer">马斯克等高管联署请愿，要求 Nvidia 恢复黄仁勋 CEO 职务</a>
+          </h3>
+          <p class="card-sum">要求 Nvidia 恢复被罢免 CEO 黄仁勋职务的请愿书，截至周六下午已获得超过 11.5 万个签名，包括 5,96…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">08</span>
+            <span class="chip" title="The Decoder：AI News（RSS）">The Decoder：AI News（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/" target="_blank" rel="noopener noreferrer">Anthropic CEO Amodei 在 IPO 前承认明年存在巨大不确定性，算力是公司最深的商业两难</a>
+          </h3>
+          <p class="card-sum">Anthropic CEO Dario Amodei 在 JPMorgan 投资者活动上表示，明年的走向存在巨大不确定…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://the-decoder.com/anthropic-ceo-amodei-admits-theres-a-huge-uncertainty-in-whats-going-to-happen-next-year-days-before-a-record-ipo/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">09</span>
+            <span class="chip" title="The Verge：AI（RSS）">The Verge：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo" target="_blank" rel="noopener noreferrer">黄仁勋离开Nvidia：远见型创始人CEO时代落幕</a>
+          </h3>
+          <p class="card-sum">The Verge长文回顾黄仁勋离开Nvidia，分析这位执掌首家5万亿美元公司、占标普500约6%的创始人的离去意味…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">10</span>
+            <span class="chip" title="Cursor Blog">Cursor Blog</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener noreferrer">Cursor 披露安全事件调查结果，恶意 Claude Code 扩展波及最多 5000 用户</a>
+          </h3>
+          <p class="card-sum">Cursor 发布安全事件完整调查：攻击者利用 Fireworks 暴露的访问密钥读取用于模型训练的 coding a…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://cursor.com/blog/security-incident-update" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">11</span>
+            <span class="chip" title="X：Rohan Paul (@rohanpaul_ai)">X：Rohan Paul (@rohanpaul_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/rohanpaul_ai/status/2121391185499660332" target="_blank" rel="noopener noreferrer">美联储金融稳定报告：AI成为华尔街头号金融风险</a>
+          </h3>
+          <p class="card-sum">美联储发布金融稳定报告，纽约联储调查显示87%的市场人士将AI列为首要金融风险，高于春季的50%。报告称对超级智能的市…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://x.com/rohanpaul_ai/status/2121391185499660332" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">12</span>
+            <span class="chip" title="TechCrunch：AI（RSS）">TechCrunch：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/" target="_blank" rel="noopener noreferrer">Jensen Huang 离任或给 AI 创业融资留下大缺口，投资人和创始人担忧</a>
+          </h3>
+          <p class="card-sum">Nvidia CEO Jensen Huang 正式辞职，创投圈认为其继任者 Colette Kress 更保守，短期…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">13</span>
+            <span class="chip" title="X：Rohan Paul (@rohanpaul_ai)">X：Rohan Paul (@rohanpaul_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/rohanpaul_ai/status/2121354165352096179" target="_blank" rel="noopener noreferrer">NVIDIA 副总裁 Bryan Catanzaro 澄清要求恢复 Jensen 职务的信件系伪造</a>
+          </h3>
+          <p class="card-sum">Rohan Paul 转发 NVIDIA 应用深度学习研究副总裁 Bryan Catanzaro 的声明：网上流传一封…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://x.com/rohanpaul_ai/status/2121354165352096179" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">14</span>
+            <span class="chip" title="X：Rohan Paul (@rohanpaul_ai)">X：Rohan Paul (@rohanpaul_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/rohanpaul_ai/status/2121387496722329833" target="_blank" rel="noopener noreferrer">Dario Amodei 回应市场动荡：Anthropic IPO 前称对时机并不在意</a>
+          </h3>
+          <p class="card-sum">Dario Amodei 在纽约 JPMorgan 活动上与 Jamie Dimon 对谈，对 Anthropic I…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://x.com/rohanpaul_ai/status/2121387496722329833" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-tips" class="section" style="--c:#f472b6">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">技巧与观点</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">15</span>
+            <span class="chip" title="公众号：数字生命卡兹克">公众号：数字生命卡兹克</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://mp.weixin.qq.com/s/ZJddy1ssHBvw_1sm12jrkg" target="_blank" rel="noopener noreferrer">AI 手搓的 1.4M 纯 HTML 3D 游戏走红，卡兹克拆解 Three.js 程序化生成原理并给出提示词模板</a>
+          </h3>
+          <p class="card-sum">作者拆解了近期在群里疯传的 1.4M 纯 HTML 3D 游戏，指出其中约 700KB 是打包进文件的 Three.j…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://mp.weixin.qq.com/s/ZJddy1ssHBvw_1sm12jrkg" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">16</span>
+            <span class="chip" title="Nathan Lambert：Interconnects（RSS）">Nathan Lambert：Interconnects（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.interconnects.ai/p/open-source-ai-without-jensen" target="_blank" rel="noopener noreferrer">Nathan Lambert 分析黄仁勋辞职后美国开源模型生态的真空</a>
+          </h3>
+          <p class="card-sum">Nathan Lambert 撰文分析 Nvidia CEO 黄仁勋辞职对美国开源模型生态的冲击，认为 Nvidia …</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://www.interconnects.ai/p/open-source-ai-without-jensen" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">17</span>
+            <span class="chip" title="X：Lydia Hallie（Anthropic，Claude Code） (@lydiahallie)">X：Lydia Hallie（Anthropic，Claude Code） (@lydiahallie)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/lydiahallie/status/2121313048820617645" target="_blank" rel="noopener noreferrer">Claude Code Stop hook 技巧：用 exit code 2 让 Claude 在检查失败时自动重试</a>
+          </h3>
+          <p class="card-sum">Lydia Hallie 分享一个 Claude Code 使用技巧：用 Stop hook 让 Claude 在检查…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月16日 星期一</span>
+            <a class="orig" href="https://x.com/lydiahallie/status/2121313048820617645" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+
+    <section id="sec-opportunities" class="section" style="--c:#f59e0b">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">今日商机</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 01</span>
+            <span class="chip">国内·内容产品型</span>
+          </div>
+          <h3 class="card-title">H5 3D 互动内容代做：把公开的提示词模板变成品牌营销单页</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11 月 15–16 日一个 1.4M 的纯 HTML 3D 小游戏刷屏，拆解显示其中约 700KB 是打包进文件的 Three.js，其余全部由代码程序化生成、没有图片模型和录音，作者同时公开了提示词模板</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(1)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 02</span>
+            <span class="chip">国内·服务型</span>
+          </div>
+          <h3 class="card-title">开源数字人模型落地：本地商家与博主的短视频批量代做</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11 月中旬美团 LongCat 开源 LongCat-Video-Avatar 1.6 音频驱动数字人视频模型，同期腾讯混元发布实时语音模型 Hy Realtime，新增工具调用与唱歌能力</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(2)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 03</span>
+            <span class="chip">外贸·平台规则窗口</span>
+          </div>
+          <h3 class="card-title">亚马逊 Haul 静默收录自查：帮卖家找回被低价频道吃掉的利润</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11 月 16 日跨境电商周报：亚马逊把低价频道 Haul 的商品接入主站常规搜索，近 18.4 万卖家在 Haul 有在售商品、占美国站活跃卖家约 40%，其中绝大多数并未主动报名，由系统自动跨频道上架</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(3)">查看分析</button>
+          </div>
+        </article></div>
+    </section>
+</main>
+
+<footer class="foot wrap">
+  本日报共 <b style="color:var(--mut)">17</b> 条 ｜ 数据来源：公开资讯渠道自动化聚合，每条附原文出处<br>
+  生成于 11月16日 08:00（北京时间） ｜ 收录区间 11月15日 08:00（北京时间） – 11月16日 08:00（北京时间）
+</footer>
+
+
+        <div class="modal" id="opp-modal-1">
+          <div class="modal-mask" onclick="closeOpp(1)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(1)" title="关闭">×</button>
+            <div class="modal-tag">国内·内容产品型</div>
+            <h3 class="modal-title">H5 3D 互动内容代做：把公开的提示词模板变成品牌营销单页</h3>
+            <p class="modal-signal">信号依据：11 月 15–16 日一个 1.4M 的纯 HTML 3D 小游戏刷屏，拆解显示其中约 700KB 是打包进文件的 Three.js，其余全部由代码程序化生成、没有图片模型和录音，作者同时公开了提示词模板</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>本地餐饮、家居、连锁门店的市场负责人，以及需要互动物料的展会执行与小型广告公司；在小红书、抖音发同款效果演示视频接单最直接。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>品牌要的是「能让人玩一下」的传播物料，传统外包 3–8 万、周期三周；用模板生成网页单页可压到一两天交付，报价 3000–15000 元（估算）仍有厚利，差价就是你替客户省下的时间。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>一人加 AI 就能出成品，不需要美术与后端团队；只接浏览器网页版单页，不碰要版号的游戏，门槛刚好落在个人能力圈内。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低。域名加托管一年约 500–1500 元（估算），其余成本基本是时间。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>别碰微信小游戏——带内购必须版号，个人拿不到；网页版想在微信里传播得先做域名备案，否则链接分享出去打不开。另外这类玩法两周就被抄烂，接单前把「改几版、改什么」写进合同，别答应无限次调整。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>用模板做一个 30 秒可玩的品牌互动 demo，配一条「从提示词到上线 48 小时」的过程视频发出去，让客户先玩到再谈钱。</p></div>
+            </div>
+            <a class="opp-link" href="https://mp.weixin.qq.com/s/ZJddy1ssHBvw_1sm12jrkg" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-2">
+          <div class="modal-mask" onclick="closeOpp(2)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(2)" title="关闭">×</button>
+            <div class="modal-tag">国内·服务型</div>
+            <h3 class="modal-title">开源数字人模型落地：本地商家与博主的短视频批量代做</h3>
+            <p class="modal-signal">信号依据：11 月中旬美团 LongCat 开源 LongCat-Video-Avatar 1.6 音频驱动数字人视频模型，同期腾讯混元发布实时语音模型 Hy Realtime，新增工具调用与唱歌能力</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>本地门店与连锁加盟商、需要稳定更新的知识类博主；从视频号老客和同行转介绍切入，比陌生开发快得多。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>商家缺的不是一条视频，是每周 3–5 条的稳定更新；开源模型免授权费，按月 2000–5000 元（估算）包月比单条外包更稳，你卖的是「不断更」而不是「一条片子」。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>一人能跑通选题、脚本、出片全流程，AI 把出片时间从一天压到一小时；但需要能跑模型的显卡或云算力，只有笔记本做不动。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>中。二手 4090 主机约 1.5 万元或云算力 3–8 元每小时（估算），另加一份人像素材使用授权。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>纯数字人口播在抖音、视频号容易被判低质同质化，限流比不涨粉更伤账号，必须掺真人素材与实拍；9 月 1 日起 AI 生成内容须带显式与隐式标识，漏标被举报要担责；用真人形象务必签书面授权，别拿网图开跑。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>挑 3 家本地店免费各出 5 条，用真实到店转化数据谈下第一张包月单。</p></div>
+            </div>
+            <a class="opp-link" href="https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.6" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-3">
+          <div class="modal-mask" onclick="closeOpp(3)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(3)" title="关闭">×</button>
+            <div class="modal-tag">外贸·平台规则窗口</div>
+            <h3 class="modal-title">亚马逊 Haul 静默收录自查：帮卖家找回被低价频道吃掉的利润</h3>
+            <p class="modal-signal">信号依据：11 月 16 日跨境电商周报：亚马逊把低价频道 Haul 的商品接入主站常规搜索，近 18.4 万卖家在 Haul 有在售商品、占美国站活跃卖家约 40%，其中绝大多数并未主动报名，由系统自动跨频道上架</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>有美国站的亚马逊中小卖家、跨境代运营公司；在卖家社群与行业媒体圈层用一张免费自查表换线索最有效。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>同一 SKU 在主站与 Haul 出现两个价格入口，价格锚被拉低、促销与广告预算被稀释；卖家真正想买的是「哪些链接被收录、要不要跟价、怎么调价才保住毛利」这一份账。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>交付物是一张表加一份调价建议，不需要写代码；但必须熟亚马逊后台与广告结构，没做过跨境的人接不住，先看清自己有没有这层经验。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低。卖家后台报表与工具本身免费，主要成本是你的时间。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>别承诺「帮你退出 Haul」——收录由平台系统决定，没人能保证下架，敢这么卖就是骗单；也别渲染成「被限流」制造恐慌，真实影响是利润和品牌定位。按效果收费很难验收，按店铺诊断打包价更稳。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>拿自己或朋友的店跑一遍收录比对，整理一页《Haul 收录自查 10 问》发到卖家群换第一批线索。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.163.com/dy/article/LBQNMUKM05118A6A.html" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('show', window.scrollY>520);
+  });
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.openOpp=function(i){document.getElementById('opp-modal-'+i).classList.add('show')};
+  window.closeOpp=function(i){document.getElementById('opp-modal-'+i).classList.remove('show')};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(function(m){m.classList.remove('show')})}
+  });
+})();
+</script>
+</body>
+</html>
