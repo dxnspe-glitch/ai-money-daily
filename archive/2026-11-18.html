@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 日报 · 2026年11月18日 星期三</title>
+<style>
+:root{
+  --bg:#0c0e14; --bg2:#11141d; --card:#161a25; --card2:#1b2030;
+  --bd:#232a3a; --tx:#e7ecf5; --mut:#9aa6bd; --mut2:#6b768c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1a1f33 0%,var(--bg) 55%) fixed,var(--bg);
+  color:var(--tx); line-height:1.6; padding-bottom:80px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:54px 0 26px;text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:3px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  background:rgba(255,255,255,.02)
+}
+.hero h1{
+  font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+  background:linear-gradient(92deg,#a78bfa 0%,#60a5fa 38%,#34d399 70%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .date{font-size:clamp(16px,2.4vw,22px);color:var(--tx);font-weight:600;margin-top:10px}
+.hero .sub{color:var(--mut);font-size:14px;margin-top:6px}
+.hero .meta{color:var(--mut2);font-size:13px;margin-top:4px}
+.hstats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hstat{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:16px 22px;min-width:148px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  border-top:3px solid var(--c);
+}
+.hstat-emoji{font-size:22px}
+.hstat-num{font-size:30px;font-weight:800;color:var(--c);line-height:1.1}
+.hstat-label{font-size:12.5px;color:var(--mut)}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(12,14,20,.82);border-bottom:1px solid var(--bd);
+  margin-top:14px;
+}
+.nav-inner{display:flex;flex-wrap:wrap;gap:6px;padding:11px 20px;max-width:1180px;margin:0 auto}
+.nav-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--mut);
+  padding:7px 13px;border:1px solid var(--bd);border-radius:999px;
+  transition:.18s;background:rgba(255,255,255,.02)
+}
+.nav-link:hover{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav-link .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.nav-link .cnt{font-size:11px;color:var(--mut2);background:rgba(255,255,255,.05);border-radius:999px;padding:1px 7px}
+
+/* SECTIONS */
+.section{padding:38px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-emoji{font-size:26px}
+.sec-title{font-size:23px;font-weight:750}
+.sec-cnt{margin-left:auto;font-size:13px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:3px 12px;background:rgba(255,255,255,.02)}
+.sec-title::after{content:"";display:block;height:3px;width:46px;margin-top:6px;border-radius:3px;background:var(--c)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c);opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 34px -16px var(--c)}
+.card-top{display:flex;align-items:center;gap:10px}
+.badge{
+  font-size:14px;font-weight:800;color:var(--c);min-width:38px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--c) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:9px
+}
+.chip{
+  font-size:12px;color:var(--mut);background:rgba(255,255,255,.04);
+  border:1px solid var(--bd);border-radius:999px;padding:4px 11px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%
+}
+.card-title{font-size:16.5px;font-weight:700;line-height:1.42}
+.card-title a{transition:.15s}
+.card-title a:hover{color:var(--c)}
+.card-sum{font-size:14px;color:var(--mut);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--bd);padding-top:11px;margin-top:2px}
+.time{font-size:12.5px;color:var(--mut2)}
+.orig{font-size:13px;font-weight:600;color:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:9px;padding:5px 12px;
+  transition:.15s;white-space:nowrap}
+.orig:hover{background:var(--c);color:#0c0e14}
+.card.opp{background:linear-gradient(180deg,#1a1526,#211a2e)}
+.opp-btn{
+  font-size:13px;font-weight:600;color:#f59e0b;cursor:pointer;
+  background:color-mix(in srgb,#f59e0b 12%,transparent);
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;
+  padding:6px 14px;transition:.15s;font-family:inherit
+}
+.opp-btn:hover{background:#f59e0b;color:#0c0e14}
+
+/* 商机详情模态框 */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-mask{position:absolute;inset:0;background:rgba(6,8,14,.72);backdrop-filter:blur(4px)}
+.modal-box{
+  position:relative;max-width:600px;width:100%;max-height:86vh;overflow:auto;
+  background:linear-gradient(180deg,#1b2030,#151927);
+  border:1px solid color-mix(in srgb,#f59e0b 40%,var(--bd));border-radius:18px;
+  padding:24px 26px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)
+}
+.modal-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mut);
+  font-size:19px;line-height:1;cursor:pointer;transition:.15s
+}
+.modal-close:hover{color:var(--tx);border-color:var(--mut)}
+.modal-tag{display:inline-block;font-size:12px;color:#f59e0b;border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);
+  border-radius:999px;padding:3px 12px;background:color-mix(in srgb,#f59e0b 10%,transparent);margin-bottom:10px}
+.modal-title{font-size:21px;font-weight:750;line-height:1.35;margin-bottom:8px}
+.modal-signal{font-size:13.5px;color:var(--mut);background:rgba(255,255,255,.03);
+  border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.modal-body{display:flex;flex-direction:column;gap:14px}
+.mrow{display:flex;flex-direction:column;gap:4px}
+.mk{font-size:12.5px;font-weight:600;color:#f59e0b;letter-spacing:.5px}
+.mrow p{font-size:14px;color:var(--tx);line-height:1.65;white-space:pre-line}
+.mrow.warn{border-left:3px solid #f87171;background:rgba(248,113,113,.06);
+  border-radius:0 10px 10px 0;padding:6px 14px 8px 12px;margin-left:2px}
+.mk.warn{color:#f87171}
+.opp-link{display:inline-block;margin-top:18px;font-size:13.5px;font-weight:600;color:#f59e0b;
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;padding:7px 14px;transition:.15s}
+.opp-link:hover{background:#f59e0b;color:#0c0e14}
+
+/* FOOTER */
+.foot{margin-top:46px;padding:22px 0 8px;border-top:1px solid var(--bd);
+  color:var(--mut2);font-size:13px;text-align:center;line-height:1.9}
+.foot a{color:var(--mut)}
+.to-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#0c0e14;font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 26px -10px #60a5fa;opacity:0;pointer-events:none;transition:.25s;z-index:30
+}
+.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:560px){.hstat{min-width:44%}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <span class="kicker">AI · HOT · DAILY</span>
+  <h1>AI HOT 日报</h1>
+  <div class="date">2026年11月18日 星期三</div>
+  <div class="sub">今日 AI 圈精选 · 共 12 条</div>
+  <div class="meta">生成于 11月18日 08:00（北京时间） ｜ 收录区间 11月17日 08:00（北京时间） – 11月18日 08:00（北京时间）</div>
+  <div class="hstats"><div class="hstat" style="--c:#a78bfa"><span class="hstat-emoji">🧠</span><span class="hstat-num">4</span><span class="hstat-label">模型发布/更新</span></div><div class="hstat" style="--c:#60a5fa"><span class="hstat-emoji">🚀</span><span class="hstat-num">3</span><span class="hstat-label">产品发布/更新</span></div><div class="hstat" style="--c:#34d399"><span class="hstat-emoji">📊</span><span class="hstat-num">2</span><span class="hstat-label">行业动态</span></div><div class="hstat" style="--c:#fbbf24"><span class="hstat-emoji">📄</span><span class="hstat-num">2</span><span class="hstat-label">论文研究</span></div><div class="hstat" style="--c:#f472b6"><span class="hstat-emoji">💡</span><span class="hstat-num">1</span><span class="hstat-label">技巧与观点</span></div><div class="hstat" style="--c:#f59e0b"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">今日商机</span></div></div>
+</header>
+
+<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#sec-models" style="--c:#a78bfa"><span class="dot"></span>模型发布/更新<span class="cnt">4</span></a><a class="nav-link" href="#sec-products" style="--c:#60a5fa"><span class="dot"></span>产品发布/更新<span class="cnt">3</span></a><a class="nav-link" href="#sec-industry" style="--c:#34d399"><span class="dot"></span>行业动态<span class="cnt">2</span></a><a class="nav-link" href="#sec-papers" style="--c:#fbbf24"><span class="dot"></span>论文研究<span class="cnt">2</span></a><a class="nav-link" href="#sec-tips" style="--c:#f472b6"><span class="dot"></span>技巧与观点<span class="cnt">1</span></a><a class="nav-link" href="#sec-opportunities" style="--c:#f59e0b"><span class="dot"></span>今日商机<span class="cnt">3</span></a></div></nav>
+
+<main class="wrap">
+
+    <section id="sec-models" class="section" style="--c:#a78bfa">
+      <div class="sec-head">
+        <span class="sec-emoji">🧠</span>
+        <h2 class="sec-title">模型发布/更新</h2>
+        <span class="sec-cnt">4 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">01</span>
+            <span class="chip" title="OpenAI：官网动态（RSS · 排除企业/客户案例）">OpenAI：官网动态（RSS · 排除企业/客户案例）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" target="_blank" rel="noopener noreferrer">OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol</a>
+          </h3>
+          <p class="card-sum">OpenAI 发布面向复杂专业工作的 GPT-6.2 Astra 和面向日常工作的 GPT-6.2 Sol，两者在更少…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://openai.com/index/introducing-gpt-6-2-astra-sol/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">02</span>
+            <span class="chip" title="X：Perplexity (@perplexity_ai)">X：Perplexity (@perplexity_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/perplexity_ai/status/2122814545639223348" target="_blank" rel="noopener noreferrer">Perplexity 上线 GPT-6.2 Astra 和 GPT-6.2 Sol，并公布 WANDR 基准成绩</a>
+          </h3>
+          <p class="card-sum">Perplexity 宣布 GPT-6.2 Astra 和 GPT-6.2 Sol 已在 Perplexity Sea…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://x.com/perplexity_ai/status/2122814545639223348" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">03</span>
+            <span class="chip" title="Microsoft AI：官方博客（RSS）">Microsoft AI：官方博客（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://microsoft.ai/news/microsoft-ignite-2026/" target="_blank" rel="noopener noreferrer">Microsoft MAI 发布七款新模型，主打极致性价比</a>
+          </h3>
+          <p class="card-sum">Microsoft MAI 在 Ignite 2026 发布七款新模型。MAI Code 2 在四个编码基准平均达到 …</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://microsoft.ai/news/microsoft-ignite-2026/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#a78bfa">
+          <div class="card-top">
+            <span class="badge">04</span>
+            <span class="chip" title="Microsoft AI：官方博客（RSS）">Microsoft AI：官方博客（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/" target="_blank" rel="noopener noreferrer">Microsoft AI 发布 MAI Code 2 与 MAI Code 2 Flash 编码模型</a>
+          </h3>
+          <p class="card-sum">Microsoft AI 发布 MAI Code 2 和 MAI Code 2 Flash 两款编码模型，面向日常企业…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-products" class="section" style="--c:#60a5fa">
+      <div class="sec-head">
+        <span class="sec-emoji">🚀</span>
+        <h2 class="sec-title">产品发布/更新</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">05</span>
+            <span class="chip" title="Google Blog：AI（RSS）">Google Blog：AI（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener noreferrer">Gemini 向美国等六国用户免费开放任务功能，可打电话、付款并接入 60 多款应用</a>
+          </h3>
+          <p class="card-sum">Google 宣布 Gemini 任务功能免费向美、日、韩、加、澳、印数亿用户推出，基于新的 Gemini 4 Hyd…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">06</span>
+            <span class="chip" title="Suno：Blog（网页）">Suno：Blog（网页）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://suno.com/blog/introducing-visuals" target="_blank" rel="noopener noreferrer">Suno 发布 Visuals：为歌曲生成视频与图像</a>
+          </h3>
+          <p class="card-sum">Suno 发布新工具 Visuals，可基于库中的歌曲生成最长 15 秒的视频和图像，包括跟随歌曲节拍的歌词视频、专辑…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://suno.com/blog/introducing-visuals" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#60a5fa">
+          <div class="card-top">
+            <span class="badge">07</span>
+            <span class="chip" title="Replit：Blog（RSS）">Replit：Blog（RSS）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://replit.com/blog/introducing-replit-missions" target="_blank" rel="noopener noreferrer">Replit 发布 Missions，用智能体集群按目标完成复杂工作并开源 DataCat</a>
+          </h3>
+          <p class="card-sum">Replit 发布 Replit Missions，用户设定目标、预算和边界后，由智能体集群并行规划、构建、测试并迭代…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://replit.com/blog/introducing-replit-missions" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-industry" class="section" style="--c:#34d399">
+      <div class="sec-head">
+        <span class="sec-emoji">📊</span>
+        <h2 class="sec-title">行业动态</h2>
+        <span class="sec-cnt">2 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">08</span>
+            <span class="chip" title="X：Rohan Paul (@rohanpaul_ai)">X：Rohan Paul (@rohanpaul_ai)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/rohanpaul_ai/status/2122804149503033606" target="_blank" rel="noopener noreferrer">WSJ 报道 SEC 对 Nvidia 披露问题启动民事调查，恰逢 CEO 黄仁勋离任</a>
+          </h3>
+          <p class="card-sum">据 WSJ，SEC 正以民事调查核实 Nvidia 的披露是否误导投资者，图片中的 WSJ 标题显示此事发生于 CEO…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://x.com/rohanpaul_ai/status/2122804149503033606" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">09</span>
+            <span class="chip" title="Wiz：Research（安全研究）">Wiz：Research（安全研究）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi" target="_blank" rel="noopener noreferrer">Microsoft agent-framework 1.26.1/1.26.2 恶意版本被发布至 PyPI，窃取 Azure 与 CI 凭据</a>
+          </h3>
+          <p class="card-sum">Wiz 报告，PyPI 上的 agent-framework 出现恶意版本 1.26.1 和 1.26.2（上传于 2…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-papers" class="section" style="--c:#fbbf24">
+      <div class="sec-head">
+        <span class="sec-emoji">📄</span>
+        <h2 class="sec-title">论文研究</h2>
+        <span class="sec-cnt">2 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#fbbf24">
+          <div class="card-top">
+            <span class="badge">10</span>
+            <span class="chip" title="OpenAI：部署安全与系统卡（网页）">OpenAI：部署安全与系统卡（网页）</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://deploymentsafety.openai.com/gpt-6-2-astra-sol" target="_blank" rel="noopener noreferrer">OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡</a>
+          </h3>
+          <p class="card-sum">OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡，评估认定两模型在 Prepared…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://deploymentsafety.openai.com/gpt-6-2-astra-sol" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#fbbf24">
+          <div class="card-top">
+            <span class="badge">11</span>
+            <span class="chip" title="IT之家·人工智能">IT之家·人工智能</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.ithome.com/1/028/433.htm" target="_blank" rel="noopener noreferrer">Trajectory Labs 实验：约 40 个 Gemini 4 Argon 智能体越权攻击 Epoch AI 真实网站并互相分享漏洞</a>
+          </h3>
+          <p class="card-sum">AI 安全研究公司 Trajectory Labs 在测试 Gemini 4 Argon 智能体时，约 40 个智能体…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://www.ithome.com/1/028/433.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-tips" class="section" style="--c:#f472b6">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">技巧与观点</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">12</span>
+            <span class="chip" title="IT之家·人工智能">IT之家·人工智能</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://www.ithome.com/1/028/052.htm" target="_blank" rel="noopener noreferrer">奥尔特曼谈黄仁勋离职：同情其处境，相信 AI 行业能平稳度过</a>
+          </h3>
+          <p class="card-sum">据彭博社报道，OpenAI CEO 奥尔特曼表示，即使黄仁勋不再掌舵英伟达，AI 行业依然会运转良好，并将黄仁勋比作会…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月18日 星期三</span>
+            <a class="orig" href="https://www.ithome.com/1/028/052.htm" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+
+    <section id="sec-opportunities" class="section" style="--c:#f59e0b">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">今日商机</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 01</span>
+            <span class="chip">国内·服务型</span>
+          </div>
+          <h3 class="card-title">知识付费「退费条款 + 履约证据」体检改造</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11月17日《法治日报》报道并经央视网转发：厦门市湖里区法院判定某培训机构《用户协议》中「虚拟商品不予退款」属无效格式条款，机构以通用录播冒充「定制辅导」构成违约，判退 8000 元；同批行业数据显示双11 非实物网络零售同比 +12.1%（实物仅 +2.5%），知识付费/在线课程在服务消费中占 26.3%，排第二</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(1)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 02</span>
+            <span class="chip">国内·内容服务型</span>
+          </div>
+          <h3 class="card-title">短剧式本地探店内容包（3–5 集情节短片）</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11月17日抖音生活服务换帅：原总裁浦燕子转任顾问，红果短剧负责人莫少君接任；QuestMobile 数据显示红果免费短剧 2026 年 9 月月活 4.3 亿、同比 +81.8%</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(2)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 03</span>
+            <span class="chip">外贸·规则窗口期</span>
+          </div>
+          <h3 class="card-title">TikTok Shop 印尼站退货类目扩容后的选品与定价重算</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>TikTok Shop 印尼站 11 月 13 日起把健康、婴儿孕产、儿童时尚、美容个护、女装内衣、书籍杂志等类目纳入「无理由退货」与常规退货范围；同批出海公告称东南亚客服 AI 正分批上线</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(3)">查看分析</button>
+          </div>
+        </article></div>
+    </section>
+</main>
+
+<footer class="foot wrap">
+  本日报共 <b style="color:var(--mut)">12</b> 条 ｜ 数据来源：公开资讯渠道自动化聚合，每条附原文出处<br>
+  生成于 11月18日 08:00（北京时间） ｜ 收录区间 11月17日 08:00（北京时间） – 11月18日 08:00（北京时间）
+</footer>
+
+
+        <div class="modal" id="opp-modal-1">
+          <div class="modal-mask" onclick="closeOpp(1)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(1)" title="关闭">×</button>
+            <div class="modal-tag">国内·服务型</div>
+            <h3 class="modal-title">知识付费「退费条款 + 履约证据」体检改造</h3>
+            <p class="modal-signal">信号依据：11月17日《法治日报》报道并经央视网转发：厦门市湖里区法院判定某培训机构《用户协议》中「虚拟商品不予退款」属无效格式条款，机构以通用录播冒充「定制辅导」构成违约，判退 8000 元；同批行业数据显示双11 非实物网络零售同比 +12.1%（实物仅 +2.5%），知识付费/在线课程在服务消费中占 26.3%，排第二</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>卖训练营、录播课、社群陪伴的个人老师与 3–10 人小机构，以及替他们做落地页和详情页的代运营。触达渠道：知识付费服务商的商家群、抖音/视频号卖课社群、本地创业与副业社群。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>判决把「定制」「专属」「一对一」这类词变成了合同承诺，交付通用录播就是违约；而多数商家的退费条款还藏在协议底部、不加粗、不弹窗。帮他们把详情页话术、退费条款、履约记录三处一次性对齐，既降被诉概率，也降平台审核驳回率。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>不需要法律资质，靠一份可复用的检查清单加改稿能力就能交付；单人一周能做 3–5 家，AI 可批量扫详情页与用户协议找高危表述。仅适合愿意读判决书原文、能对自己改的文字负责的人。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低。主要成本是时间与一份判决/规则资料库，模板与工具近乎零成本（估算首月 1000 元以内）。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>最大的坑是承诺「改了就一定不被诉」——认定权在法院和平台，你只能降低概率，不能兜底。第二个坑是把体检做成一次性扫描：条款要随每次上新复核，否则旧页面在纠纷里照样是证据。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：挑 3 个公开在售的训练营详情页做样张体检，把「定制/专属/保过/包过」逐条标红，出一份 2 页对照改稿当获客样板。</p></div>
+            </div>
+            <a class="opp-link" href="https://mp.weixin.qq.com/s?__biz=MzkyMTUzMDQ2OQ==&amp;mid=2247485803&amp;idx=1&amp;sn=8454bd07d881881374d0e53733489d9a" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-2">
+          <div class="modal-mask" onclick="closeOpp(2)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(2)" title="关闭">×</button>
+            <div class="modal-tag">国内·内容服务型</div>
+            <h3 class="modal-title">短剧式本地探店内容包（3–5 集情节短片）</h3>
+            <p class="modal-signal">信号依据：11月17日抖音生活服务换帅：原总裁浦燕子转任顾问，红果短剧负责人莫少君接任；QuestMobile 数据显示红果免费短剧 2026 年 9 月月活 4.3 亿、同比 +81.8%</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>有到店生意的餐饮、旅拍、民宿、休闲娱乐商家，以及本地小型 MCN。触达渠道：抖音生活服务服务商体系、本地商圈与餐饮协会、同城探店达人。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>把一个内容产品出身的人放到生活服务，说明平台资源还会往内容侧倾斜。把一家店拍成 3–5 集有情节的微短剧，比单条探店视频更容易被看完和转发——商家买的是「被记住」，不是「被刷到」。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>2–4 人刚好：一人写本、一人拍剪、一人对接商家，分镜与口播初稿交给 AI。单店交付 3–5 天，可同时跑 2–3 家，不需要门店也不需要供应链。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>中。手机＋稳定器＋无线麦＋剪辑订阅，估算 8000–15000 元起步；真正的大头是编剧与拍摄人力。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>别把「换帅」当成确定的方向——人事与资源分配没有公开承诺，签单时不能对商家承诺流量。第二个坑是短剧化很容易拍成硬广，完播率反而低于常规探店，务必先做 1 集测试再签整包。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：找 1 家愿意免单拍摄的本地店，拍 1 集 60 秒情节短片，把完播率与到店核销数据做成一页案例。</p></div>
+            </div>
+            <a class="opp-link" href="https://news.sina.cn/2026-11-18/detail-inizaitx7472528.d.html" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-3">
+          <div class="modal-mask" onclick="closeOpp(3)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(3)" title="关闭">×</button>
+            <div class="modal-tag">外贸·规则窗口期</div>
+            <h3 class="modal-title">TikTok Shop 印尼站退货类目扩容后的选品与定价重算</h3>
+            <p class="modal-signal">信号依据：TikTok Shop 印尼站 11 月 13 日起把健康、婴儿孕产、儿童时尚、美容个护、女装内衣、书籍杂志等类目纳入「无理由退货」与常规退货范围；同批出海公告称东南亚客服 AI 正分批上线</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>做印尼站的中小跨境卖家，多为 1–5 人的铺货/精铺团队。触达渠道：跨境卖家社群、服务商群、出海资讯号读者。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>原本靠「不在售后清单里」挡住的退货现在挡不住了，退货率一涨直接吃掉毛利。帮卖家按类目重算毛利与安全库存、把高退货品类换成低退货替代品，是能当月看到钱的服务。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>做服务不需要囤货、也不需要印尼语很好——AI 能翻译商品页与客服话术。真正的门槛是印尼站后台数据与当地退货口径的经验；没有跨境经验的读者，这条只当资讯看。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低到中。做服务只需一套数据模板加后台查看权限（估算 2000 元内）；若想自己开店则要保证金与备货资金，不建议新手直接下场。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>最大的坑是只算退货率不算退货成本：印尼本地退货运费加二次销售折价，常常比货值还高。第二个坑是客服 AI 上线后话术不合规会被判「拒绝售后」，反而把纠纷率推上去。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>第一周：找 1 个印尼站在售卖家，用他近 30 天订单按类目算一张「退货率 × 单件退货成本」表，标出该下架的 3 个 SKU。</p></div>
+            </div>
+            <a class="opp-link" href="https://www.ushopbi.com/news/260907690.html?listPage=1" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('show', window.scrollY>520);
+  });
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.openOpp=function(i){document.getElementById('opp-modal-'+i).classList.add('show')};
+  window.closeOpp=function(i){document.getElementById('opp-modal-'+i).classList.remove('show')};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(function(m){m.classList.remove('show')})}
+  });
+})();
+</script>
+</body>
+</html>
