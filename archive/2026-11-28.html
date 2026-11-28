@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HOT 日报 · 2026年11月28日 星期六</title>
+<style>
+:root{
+  --bg:#0c0e14; --bg2:#11141d; --card:#161a25; --card2:#1b2030;
+  --bd:#232a3a; --tx:#e7ecf5; --mut:#9aa6bd; --mut2:#6b768c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:radial-gradient(1200px 600px at 80% -10%,#1a1f33 0%,var(--bg) 55%) fixed,var(--bg);
+  color:var(--tx); line-height:1.6; padding-bottom:80px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* HERO */
+.hero{padding:54px 0 26px;text-align:center}
+.kicker{
+  display:inline-block;font-size:13px;letter-spacing:3px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:5px 16px;margin-bottom:18px;
+  background:rgba(255,255,255,.02)
+}
+.hero h1{
+  font-size:clamp(34px,6vw,60px);font-weight:800;letter-spacing:-1px;line-height:1.1;
+  background:linear-gradient(92deg,#a78bfa 0%,#60a5fa 38%,#34d399 70%,#f472b6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .date{font-size:clamp(16px,2.4vw,22px);color:var(--tx);font-weight:600;margin-top:10px}
+.hero .sub{color:var(--mut);font-size:14px;margin-top:6px}
+.hero .meta{color:var(--mut2);font-size:13px;margin-top:4px}
+.hstats{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+.hstat{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:16px 22px;min-width:148px;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  border-top:3px solid var(--c);
+}
+.hstat-emoji{font-size:22px}
+.hstat-num{font-size:30px;font-weight:800;color:var(--c);line-height:1.1}
+.hstat-label{font-size:12.5px;color:var(--mut)}
+
+/* NAV */
+.nav{
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(12,14,20,.82);border-bottom:1px solid var(--bd);
+  margin-top:14px;
+}
+.nav-inner{display:flex;flex-wrap:wrap;gap:6px;padding:11px 20px;max-width:1180px;margin:0 auto}
+.nav-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:13.5px;color:var(--mut);
+  padding:7px 13px;border:1px solid var(--bd);border-radius:999px;
+  transition:.18s;background:rgba(255,255,255,.02)
+}
+.nav-link:hover{color:var(--tx);border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.nav-link .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.nav-link .cnt{font-size:11px;color:var(--mut2);background:rgba(255,255,255,.05);border-radius:999px;padding:1px 7px}
+
+/* SECTIONS */
+.section{padding:38px 0 6px;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sec-emoji{font-size:26px}
+.sec-title{font-size:23px;font-weight:750}
+.sec-cnt{margin-left:auto;font-size:13px;color:var(--mut);
+  border:1px solid var(--bd);border-radius:999px;padding:3px 12px;background:rgba(255,255,255,.02)}
+.sec-title::after{content:"";display:block;height:3px;width:46px;margin-top:6px;border-radius:3px;background:var(--c)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--bd);border-radius:16px;padding:18px 18px 16px;
+  display:flex;flex-direction:column;gap:11px;position:relative;overflow:hidden;
+  transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease
+}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c);opacity:.85}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 14px 34px -16px var(--c)}
+.card-top{display:flex;align-items:center;gap:10px}
+.badge{
+  font-size:14px;font-weight:800;color:var(--c);min-width:38px;height:30px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:color-mix(in srgb,var(--c) 14%,transparent);
+  border:1px solid color-mix(in srgb,var(--c) 40%,transparent);border-radius:9px
+}
+.chip{
+  font-size:12px;color:var(--mut);background:rgba(255,255,255,.04);
+  border:1px solid var(--bd);border-radius:999px;padding:4px 11px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%
+}
+.card-title{font-size:16.5px;font-weight:700;line-height:1.42}
+.card-title a{transition:.15s}
+.card-title a:hover{color:var(--c)}
+.card-sum{font-size:14px;color:var(--mut);flex:1}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  border-top:1px solid var(--bd);padding-top:11px;margin-top:2px}
+.time{font-size:12.5px;color:var(--mut2)}
+.orig{font-size:13px;font-weight:600;color:var(--c);
+  border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:9px;padding:5px 12px;
+  transition:.15s;white-space:nowrap}
+.orig:hover{background:var(--c);color:#0c0e14}
+.card.opp{background:linear-gradient(180deg,#1a1526,#211a2e)}
+.opp-btn{
+  font-size:13px;font-weight:600;color:#f59e0b;cursor:pointer;
+  background:color-mix(in srgb,#f59e0b 12%,transparent);
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;
+  padding:6px 14px;transition:.15s;font-family:inherit
+}
+.opp-btn:hover{background:#f59e0b;color:#0c0e14}
+
+/* 商机详情模态框 */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-mask{position:absolute;inset:0;background:rgba(6,8,14,.72);backdrop-filter:blur(4px)}
+.modal-box{
+  position:relative;max-width:600px;width:100%;max-height:86vh;overflow:auto;
+  background:linear-gradient(180deg,#1b2030,#151927);
+  border:1px solid color-mix(in srgb,#f59e0b 40%,var(--bd));border-radius:18px;
+  padding:24px 26px;box-shadow:0 24px 60px -20px rgba(0,0,0,.6)
+}
+.modal-close{
+  position:absolute;top:14px;right:16px;width:34px;height:34px;border-radius:10px;
+  background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--mut);
+  font-size:19px;line-height:1;cursor:pointer;transition:.15s
+}
+.modal-close:hover{color:var(--tx);border-color:var(--mut)}
+.modal-tag{display:inline-block;font-size:12px;color:#f59e0b;border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);
+  border-radius:999px;padding:3px 12px;background:color-mix(in srgb,#f59e0b 10%,transparent);margin-bottom:10px}
+.modal-title{font-size:21px;font-weight:750;line-height:1.35;margin-bottom:8px}
+.modal-signal{font-size:13.5px;color:var(--mut);background:rgba(255,255,255,.03);
+  border:1px solid var(--bd);border-radius:12px;padding:10px 14px;margin-bottom:16px}
+.modal-body{display:flex;flex-direction:column;gap:14px}
+.mrow{display:flex;flex-direction:column;gap:4px}
+.mk{font-size:12.5px;font-weight:600;color:#f59e0b;letter-spacing:.5px}
+.mrow p{font-size:14px;color:var(--tx);line-height:1.65;white-space:pre-line}
+.mrow.warn{border-left:3px solid #f87171;background:rgba(248,113,113,.06);
+  border-radius:0 10px 10px 0;padding:6px 14px 8px 12px;margin-left:2px}
+.mk.warn{color:#f87171}
+.opp-link{display:inline-block;margin-top:18px;font-size:13.5px;font-weight:600;color:#f59e0b;
+  border:1px solid color-mix(in srgb,#f59e0b 45%,transparent);border-radius:9px;padding:7px 14px;transition:.15s}
+.opp-link:hover{background:#f59e0b;color:#0c0e14}
+
+/* FOOTER */
+.foot{margin-top:46px;padding:22px 0 8px;border-top:1px solid var(--bd);
+  color:var(--mut2);font-size:13px;text-align:center;line-height:1.9}
+.foot a{color:var(--mut)}
+.to-top{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg,#a78bfa,#60a5fa);color:#0c0e14;font-size:20px;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  box-shadow:0 10px 26px -10px #60a5fa;opacity:0;pointer-events:none;transition:.25s;z-index:30
+}
+.to-top.show{opacity:1;pointer-events:auto}
+@media(max-width:560px){.hstat{min-width:44%}.hero{padding-top:38px}}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <span class="kicker">AI · HOT · DAILY</span>
+  <h1>AI HOT 日报</h1>
+  <div class="date">2026年11月28日 星期六</div>
+  <div class="sub">今日 AI 圈精选 · 共 3 条</div>
+  <div class="meta">生成于 11月28日 08:00（北京时间） ｜ 收录区间 11月27日 08:00（北京时间） – 11月28日 08:00（北京时间）</div>
+  <div class="hstats"><div class="hstat" style="--c:#34d399"><span class="hstat-emoji">📊</span><span class="hstat-num">1</span><span class="hstat-label">行业动态</span></div><div class="hstat" style="--c:#f472b6"><span class="hstat-emoji">💡</span><span class="hstat-num">2</span><span class="hstat-label">技巧与观点</span></div><div class="hstat" style="--c:#f59e0b"><span class="hstat-emoji">💡</span><span class="hstat-num">3</span><span class="hstat-label">今日商机</span></div></div>
+</header>
+
+<nav class="nav"><div class="nav-inner"><a class="nav-link" href="#sec-industry" style="--c:#34d399"><span class="dot"></span>行业动态<span class="cnt">1</span></a><a class="nav-link" href="#sec-tips" style="--c:#f472b6"><span class="dot"></span>技巧与观点<span class="cnt">2</span></a><a class="nav-link" href="#sec-opportunities" style="--c:#f59e0b"><span class="dot"></span>今日商机<span class="cnt">3</span></a></div></nav>
+
+<main class="wrap">
+
+    <section id="sec-industry" class="section" style="--c:#34d399">
+      <div class="sec-head">
+        <span class="sec-emoji">📊</span>
+        <h2 class="sec-title">行业动态</h2>
+        <span class="sec-cnt">1 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#34d399">
+          <div class="card-top">
+            <span class="badge">01</span>
+            <span class="chip" title="X：面壁智能 OpenBMB (@OpenBMB)">X：面壁智能 OpenBMB (@OpenBMB)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/OpenBMB/status/2126308118741323853" target="_blank" rel="noopener noreferrer">OpenBMB 点评 InternLM 基于 MiniCPM-o 4.5 打造的 Sage-Interaction</a>
+          </h3>
+          <p class="card-sum">OpenBMB 转发并点评上海人工智能实验室 InternLM 团队发布的开源全双工语音视频模型 Sage-Inter…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月28日 星期六</span>
+            <a class="orig" href="https://x.com/OpenBMB/status/2126308118741323853" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+    <section id="sec-tips" class="section" style="--c:#f472b6">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">技巧与观点</h2>
+        <span class="sec-cnt">2 条</span>
+      </div>
+      <div class="grid">
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">02</span>
+            <span class="chip" title="公众号：数字生命卡兹克">公众号：数字生命卡兹克</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://mp.weixin.qq.com/s/x7Yt237NPL-sLvkUJlwESw" target="_blank" rel="noopener noreferrer">实测支付宝 SkillPay：手把手教你怎么把 Skill 挂上去卖钱</a>
+          </h3>
+          <p class="card-sum">作者完整实测支付宝 SkillPay 平台的 Skill 变现流程，该平台7月上线，支持买断和订阅两种售卖模式。买断制…</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月28日 星期六</span>
+            <a class="orig" href="https://mp.weixin.qq.com/s/x7Yt237NPL-sLvkUJlwESw" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article>
+        <article class="card" style="--c:#f472b6">
+          <div class="card-top">
+            <span class="badge">03</span>
+            <span class="chip" title="X：卡兹克 (@Khazix0918)">X：卡兹克 (@Khazix0918)</span>
+          </div>
+          <h3 class="card-title">
+            <a href="https://x.com/Khazix0918/status/2126294658431201385" target="_blank" rel="noopener noreferrer">Antigravity 实用技巧：在 GEMINI.md 加一句话让模型边干活边汇报</a>
+          </h3>
+          <p class="card-sum">卡兹克分享一个 Antigravity 使用技巧，针对模型长时间闷头干活不输出信息的问题，只需在 GEMINI.md …</p>
+          <div class="card-foot">
+            <span class="time">🗓 11月28日 星期六</span>
+            <a class="orig" href="https://x.com/Khazix0918/status/2126294658431201385" target="_blank" rel="noopener noreferrer">原文 ↗</a>
+          </div>
+        </article></div>
+    </section>
+
+    <section id="sec-opportunities" class="section" style="--c:#f59e0b">
+      <div class="sec-head">
+        <span class="sec-emoji">💡</span>
+        <h2 class="sec-title">今日商机</h2>
+        <span class="sec-cnt">3 条</span>
+      </div>
+      <div class="grid">
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 01</span>
+            <span class="chip">国内·内容产品型</span>
+          </div>
+          <h3 class="card-title">把专业知识做成可售 Skill，挂上 SkillPay 分成</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11/28 有作者实测支付宝 SkillPay 全流程，把 Skill 挂上去即可标价出售、按调用分成（公众号「数字生命卡兹克」）。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(1)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 02</span>
+            <span class="chip">国内·平台窗口期</span>
+          </div>
+          <h3 class="card-title">微信小店 12 月限时秒杀报名，替小商家把年末最后一波流量接住</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11/28 微信小店 12 月限时秒杀政策公开：报名期 11 月 28 日至 12 月 30 日，活动覆盖 12 月 1 日至 31 日，涉及低价商品、流量扶持与补贴；同期还有 11–12 月商家增量激励，完成增长目标可领电商成长卡用于直播和短视频加热。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(2)">查看分析</button>
+          </div>
+        </article>
+        <article class="card opp" style="--c:#f59e0b">
+          <div class="card-top">
+            <span class="badge">商机 03</span>
+            <span class="chip">外贸·合规窗口期</span>
+          </div>
+          <h3 class="card-title">美国清关主体新规前的舱位与报关行资质锁定</h3>
+          <p class="card-sum"><b style="color:var(--c)">信号依据：</b>11/28 跨境情报：美国 IOR 新规 2027 年 1 月 5 日生效，外国 IOR 须由 CTPAT 认证报关行代理，含在途货物，已有货代停收；CBP 邮政 Type 13 强制日推迟至 1 月 20 日。</p>
+          <div class="card-foot">
+            <span class="time">点击查看完整分析</span>
+            <button class="opp-btn" onclick="openOpp(3)">查看分析</button>
+          </div>
+        </article></div>
+    </section>
+</main>
+
+<footer class="foot wrap">
+  本日报共 <b style="color:var(--mut)">3</b> 条 ｜ 数据来源：公开资讯渠道自动化聚合，每条附原文出处<br>
+  生成于 11月28日 08:00（北京时间） ｜ 收录区间 11月27日 08:00（北京时间） – 11月28日 08:00（北京时间）
+</footer>
+
+
+        <div class="modal" id="opp-modal-1">
+          <div class="modal-mask" onclick="closeOpp(1)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(1)" title="关闭">×</button>
+            <div class="modal-tag">国内·内容产品型</div>
+            <h3 class="modal-title">把专业知识做成可售 Skill，挂上 SkillPay 分成</h3>
+            <p class="modal-signal">信号依据：11/28 有作者实测支付宝 SkillPay 全流程，把 Skill 挂上去即可标价出售、按调用分成（公众号「数字生命卡兹克」）。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>手里有成型方法论的人：财税代理、HR 顾问、健身教练、留学文书老师、行业培训师。触达渠道是他们的私域群和同行社群，不是技术论坛。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>他们过去只能卖课时和咨询，一次交付一次收钱。Skill 把同一套判断封装成可反复调用的产品，卖一百次不用讲一百遍。真正稀缺的不是技术，是「把口头经验写成可执行步骤」这件翻译工作。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>不需要写代码，需要的是把业务逻辑拆成步骤的能力，这正是内容型选手的强项。一个人一周能交付 1–2 个 Skill，边际成本几乎为零。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低。主要是时间成本加一点模型调用费，估算首月 1000 元以内；不需要服务器和备案。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>最大的坑是把它当成「上架就有流量」——新平台上架量一旦起来，没人知道你的 Skill 存在，前三个月真正的活是替客户做推广而不是做开发。第二，Skill 里会写进客户的业务规则和客户名单，交付前必须约定知识产权归属和退出时的数据删除，否则客户做完就想自己拿走去别处上架。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>选一个你已经收过钱的细分问题（比如「小规模纳税人该不该转一般纳税人」），把它拆成 15 步以内的判断流程，先做成一个能跑通的 Skill 给 3 个老客户免费试用。</p></div>
+            </div>
+            <a class="opp-link" href="https://mp.weixin.qq.com/s/x7Yt237NPL-sLvkUJlwESw" target="_blank" rel="noopener noreferrer">相关来源 ↗</a>
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-2">
+          <div class="modal-mask" onclick="closeOpp(2)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(2)" title="关闭">×</button>
+            <div class="modal-tag">国内·平台窗口期</div>
+            <h3 class="modal-title">微信小店 12 月限时秒杀报名，替小商家把年末最后一波流量接住</h3>
+            <p class="modal-signal">信号依据：11/28 微信小店 12 月限时秒杀政策公开：报名期 11 月 28 日至 12 月 30 日，活动覆盖 12 月 1 日至 31 日，涉及低价商品、流量扶持与补贴；同期还有 11–12 月商家增量激励，完成增长目标可领电商成长卡用于直播和短视频加热。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>微信小店里月销 5 万–50 万的中小商家，尤其是货好但不会报活动的夫妻店和产地商家。触达靠本地商家群、代运营同行转介。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>秒杀池要的是「低价但有利润」的组合，多数商家要么不敢报，要么报了个亏本价。真正的活是选 3–5 个引流款、算清满减后的到手毛利、再把详情页改成能承接瞬时流量的版本。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>一个 2–3 人小组能同时服务 15–20 家店，每家收 2000–5000 元的活动服务费；规则是公开的，不需要平台授权，也不需要囤货。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低。无加盟费无保证金，主要是人力；估算单店投入 2–3 个工作日。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>别按「报名成功」收费，要按「进池且核销」收费，否则商家会认为你只是帮他点了个按钮。另一个坑是低价款把店铺价格带打穿——秒杀结束后恢复原价，转化会断崖式下跌，必须提前和商家约定活动后的价格阶梯，不然第二个月就被换掉。政策口径以商家后台公告为准，转述媒体版本前先核对一遍日期。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>今天就从自己或朋友的微信小店后台把 12 月秒杀的报名入口和类目门槛截图下来，做成一张对照表，拿去找 3 家店验证。</p></div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal" id="opp-modal-3">
+          <div class="modal-mask" onclick="closeOpp(3)"></div>
+          <div class="modal-box">
+            <button class="modal-close" onclick="closeOpp(3)" title="关闭">×</button>
+            <div class="modal-tag">外贸·合规窗口期</div>
+            <h3 class="modal-title">美国清关主体新规前的舱位与报关行资质锁定</h3>
+            <p class="modal-signal">信号依据：11/28 跨境情报：美国 IOR 新规 2027 年 1 月 5 日生效，外国 IOR 须由 CTPAT 认证报关行代理，含在途货物，已有货代停收；CBP 邮政 Type 13 强制日推迟至 1 月 20 日。</p>
+            <div class="modal-body">
+              <div class="mrow"><span class="mk">客户在哪里</span><p>用自己公司或第三方名义做美国进口主体、单票货值 5 万美元以上的中小卖家，尤其是家具、户外、汽配这类海运大件。触达靠货代转介和跨境卖家社群。</p></div>
+              <div class="mrow"><span class="mk">价值是什么</span><p>新规按清关时间判定、含在途货，12 月发的海运正好卡在 1 月 5 日前后。卖家现在需要一张表：哪几票会撞线、报关行是否 CTPAT、合同里的保证金责任写没写。这件事有硬截止，付费意愿直接。</p></div>
+              <div class="mrow"><span class="mk">为什么适合小团队</span><p>不需要进出口资质，做的是信息核对和文本整理，2–3 人一周能覆盖 20 家卖家；有货代资源的人做这条事半功倍。无外贸经验者建议先跟着货代做助手，别直接对客承诺清关结果。</p></div>
+              <div class="mrow"><span class="mk">启动成本</span><p>低。主要是差旅和资料整理成本，估算 5000 元以内；不需要垫资。</p></div>
+              <div class="mrow warn"><span class="mk warn">避坑提示</span><p>最危险的坑是把自己说成「能搞定清关」——报关行资质和 CBP 认定都不在你手里，一旦承诺包过，货被扣就是赔付纠纷。第二，别把 12 月 7 日的意见征集截止日当成生效日，也别把 1 月 20 日的邮政延后套用到商业快件上，两个日期管的是不同通道。</p></div>
+              <div class="mrow"><span class="mk">第一周启动</span><p>本周向 2 家货代要一份「已停收线路 + CTPAT 报关行名单」，整理成可对照的一页纸。</p></div>
+            </div>
+            
+          </div>
+        </div>
+
+<button class="to-top" id="toTop" title="回到顶部">↑</button>
+<script>
+(function(){
+  var btn=document.getElementById('toTop');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('show', window.scrollY>520);
+  });
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+  window.openOpp=function(i){document.getElementById('opp-modal-'+i).classList.add('show')};
+  window.closeOpp=function(i){document.getElementById('opp-modal-'+i).classList.remove('show')};
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.querySelectorAll('.modal.show').forEach(function(m){m.classList.remove('show')})}
+  });
+})();
+</script>
+</body>
+</html>
